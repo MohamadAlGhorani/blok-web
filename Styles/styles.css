@@ -1,0 +1,55 @@
+@media screen and (max-width:640px) {
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    #header {
+        border-bottom: 1px solid black;
+        height: 60px;
+    }
+    #logo {
+        width: 66px;
+        float: right;
+        margin-right: 67px;
+        margin-left: 67px;
+    }
+    #filterIcon {
+        width: 40px;
+    }
+    #filterKnop {
+        background-color: white;
+        border: 0px;
+        width: 66px;
+        padding: 0px;
+        float: right;
+        margin-right: 39px;
+
+    }
+    #profileKnop {
+        width: 40px;
+        float: right;
+        margin-left: 39px;
+    }
+    #zoekKnop {
+        float: right;
+    }
+    #zoekBalk {
+        float: right;
+    }
+    footer {
+        background-color: rgb(247, 241, 235);
+        height: 250px;
+    }
+    #logoFoot {
+        width: 300px;
+        margin: 90px auto;
+    }
+
+}
