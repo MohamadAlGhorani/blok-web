@@ -3,68 +3,127 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>WOWair verhalen website</title>
     <link rel="stylesheet" href="Styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/kks3qsr.css">
 </head>
 
 <body>
     <header>
-        <ul id="header">
-            <li><a href=""><img id="profileKnop" src="Images/profileicon.svg" alt=""></a></li>
-            <li><a href=""><img id="logo" src="Images/sitelogo.svg" alt=""></a></li>
-            <li><button id="filterKnop"><img id="filterIcon" src="Images/filterenicon.svg" alt="">Filteren</button></li>
+        <ul>
+            <li><button>Filteren</button></li>
+            <li><a href="overzichtpagina.html"><img src="Images/sitelogo.svg" alt=""></a></li>
+            <li><a href=""><img src="Images/profileicon.svg" alt=""></a></li>
         </ul>
         <form action="">
-            <p id="zoekBalk">
-                <input type="search" placeholder="zoeken.." name="zoek">
+            <p>
+                <input type="search" placeholder="    zoeken.." name="zoek">
             </p>
-            <p id="zoekKnop">
-                <input id="submit" type="submit" name="zoek" value="zoek">
+            <p>
+                <input type="submit" name="zoek" value="ZOEK">
             </p>
         </form>
 
         <form action="">
-            <label for="genre">Genre
-                <input type="radio" name="sorteerOptie" id="genre"></label>
-            <label for="leesduur">Leesduur
-                <input type="radio" name="sorteerOptie" id="leesduur"></label>
-            <label for="populariteit">Populariteit
-                <input type="radio" name="sorteerOptie" id="populariteit"></label>
-            <label for="verrasme">Verrasme
-                <input type="radio" name="sorteerOptie" id="verrasme"></label>
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="genre">
+            <label for="genre">Genre</label>
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="leesduur">
+            <label for="leesduur">Leesduur</label>
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="populariteit">
+            <label for="populariteit">Populariteit</label>
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="verrasme">
+            <label for="verrasme">Verrasme</label>
             <input type="submit" name="sorteerOptie" value="verstuur">
         </form>
     </header>
+    <section id="welkom">
+        <h1>Welkom op onze verhalen website breng uw tijd door met leuke verhalen tijdens uw reis. Leesplezier toegewenst</h1>
+        <img src="Images/wowclub-lady-3.min.png" alt=""></section>
     <main>
-        <h1>Welkom op wow air verhalen website</h1>
+        <h2>Doorgaan met het lezen</h2>
         <section>
             <h2>Doorgaan met het lezen</h2>
             <article>
-                <a href=""><img src="" alt=""></a>
+                <a href=""><img src="Images/Unknown.jpg" alt=""></a>
                 <h3>Eric lucassen</h3>
                 <ul>
-                    <li><button><img src="Images/likeicon.svg" alt=""></button></li>
+                    <span><li><button>Like</button></li>
+                    <li>50</li></span>
                     <li>10 min</li>
-                    <li><button><img src="Images/downloadicon.svg" alt=""></button></li>
+                    <li><button>Download</button></li>
+                </ul>
+            </article>
+            <article>
+                <a href=""><img src="Images/Unknown.jpg" alt=""></a>
+                <h3>Eric lucassen</h3>
+                <ul>
+                    <span><li><button>Like</button></li>
+                    <li>50</li></span>
+                    <li>10 min</li>
+                    <li><button>Download</button></li>
+                </ul>
+            </article>
+            <article>
+                <a href=""><img src="Images/Unknown.jpg" alt=""></a>
+                <h3>Eric lucassen</h3>
+                <ul>
+                    <span><li><button>Like</button></li>
+                    <li>50</li></span>
+                    <li>10 min</li>
+                    <li><button>Download</button></li>
                 </ul>
             </article>
         </section>
+        <h2>Suggesties</h2>
         <section>
             <h2>Suggesties</h2>
             <article>
-                <a href=""><img src="" alt=""></a>
+                <a href=""><img src="Images/Unknown.jpg" alt=""></a>
                 <h3>Gefrustereerd</h3>
                 <ul>
-                    <li><button><img src="Images/likeicon.svg" alt=""></button></li>
+                    <span><li><button>Like</button></li>
+                    <li>50</li></span>
                     <li>6 min</li>
-                    <li><button><img src="Images/downloadicon.svg" alt=""></button></li>
+                    <li><button>Download</button></li>
+                </ul>
+
+            </article>
+            <article>
+                <a href=""><img src="Images/Unknown.jpg" alt=""></a>
+                <h3>Gefrustereerd</h3>
+                <ul>
+                    <span><li><button>Like</button></li>
+                    <li>50</li></span>
+                    <li>6 min</li>
+                    <li><button>Download</button></li>
+                </ul>
+
+            </article>
+            <article>
+                <a href=""><img src="Images/Unknown.jpg" alt=""></a>
+                <h3>Gefrustereerd</h3>
+                <ul>
+                    <span><li><button>Like</button></li>
+                    <li>50</li></span>
+                    <li>6 min</li>
+                    <li><button>Download</button></li>
                 </ul>
 
             </article>
         </section>
     </main>
     <footer>
-        <img id="logoFoot" src="Images/wow-logo-foot.min.png" alt="">
+        <img src="Images/wow-logo-foot.min.png" alt="">
+        <p>Neem contact met ons op</p>
+        <ul>
+            <li><a href="https://www.facebook.com/wowiceland"><img id="facebook" src="Images/facebook.svg" alt=""></a></li>
+            <li><a href="https://twitter.com/wow_air"><img id="twetter" src="Images/twitter.svg" alt=""></a></li>
+            <li><a href="https://www.instagram.com/wowair/"><img id="instagram" src="Images/instagram.svg" alt=""></a></li>
+            <li><a href="https://nl.pinterest.com/wowair/"><img id="pinterest" src="Images/pinterest.svg" alt=""></a></li>
+            <li><a href="https://www.youtube.com/user/WOWairTV"><img id="youtube" src="Images/youtube.svg" alt=""></a></li>
+            <li><a href="https://www.tripadvisor.com/Airline_Review-d8728919-Reviews-WOW-Air"><img id="tripadvaisor" src="Images/tripadvisor.svg" alt=""></a></li>
+        </ul>
     </footer>
 </body>
 
