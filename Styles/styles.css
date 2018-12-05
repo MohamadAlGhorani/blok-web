@@ -119,6 +119,7 @@ header form p:first-of-type input[type=search] {
     height: 3em;
     line-height: 3em;
     width: 100%;
+    padding-left: 1em;
 }
 
 p > input {
