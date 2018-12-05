@@ -24,13 +24,13 @@ a {
 header {
     background-color: white;
     padding-bottom: 1em;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 main {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 #welkom {
@@ -41,24 +41,25 @@ main {
 
 #welkom img {
     height: 300px;
-    padding: 15px;
+    padding: 1em;
 }
 
 #welkom h1 {
-    padding: 15px;
+    padding: 1em;
     color: #2b4040;
+    max-width: 50%;
 }
 
 header > ul {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #88AFAF;
-    height: 60px;
+    height: 3.5em;
     padding-top: 3px;
 }
 
 header ul li a img {
-    width: 66px;
+    width: 4.125em;
 }
 
 header ul li button {
@@ -66,22 +67,22 @@ header ul li button {
     border: 0px;
     background-color: transparent;
     background-repeat: no-repeat;
-    padding-top: 40px;
-    font-size: 12px;
+    padding-top: 3.1em;
+    font-size: 0.75em;
     color: #2b4040;
-    width: 40px;
+    width: 3.1em;
 
 }
 
 header button {
     background-color: white;
     border: 0px;
-    width: 40px;
+    width: 2.5em;
     padding: 0px;
 }
 
 header ul li:last-of-type a img {
-    width: 40px;
+    width: 2.5em;
 }
 
 header form p:last-of-type input[type=submit] {
@@ -89,11 +90,11 @@ header form p:last-of-type input[type=submit] {
     margin: 0px;
     border: 1px solid #2b4040;
     border-radius: 4px;
-    height: 38px;
-    line-height: 38px;
+    height: 3em;
+    line-height: 3em;
     background-color: white;
     color: #2b4040;
-    font-size: 12px;
+    font-size: 0.75;
     width: 100%;
 }
 
@@ -101,11 +102,13 @@ header p:last-of-type {
     width: 19%;
     margin-top: 0px;
     margin-left: 1%;
+    margin-bottom: 0px;
 }
 
 header p:first-of-type {
     width: 80%;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 header form p:first-of-type input[type=search] {
@@ -113,8 +116,8 @@ header form p:first-of-type input[type=search] {
     margin: 0px;
     border: 1px solid #2b4040;
     border-radius: 4px;
-    height: 38px;
-    line-height: 38px;
+    height: 3em;
+    line-height: 3em;
     width: 100%;
 }
 
@@ -125,18 +128,16 @@ p > input {
 
 header form:first-of-type {
     width: 100%;
-    height: 50px;
-    margin-top: 20px;
+    height: 3em;
+    margin-top: 1em;
     display: flex;
 }
 
 header form:last-of-type {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    position: relative;
-    max-width: 600px;
-    margin: 10px auto 0px auto;
+    max-width: 37.5em;
+    margin: 0px auto 0px auto;
 }
 
 header form label {
@@ -161,24 +162,22 @@ input[type=radio]:checked + label {
 }
 
 header form:last-of-type input[type=submit] {
-    width: 100%;
     position: absolute;
-    opacity: 0;
-    z-index: 1;
+    left: -9999;
 }
 
 footer {
     background-color: rgb(247, 241, 235);
-    height: 250px;
-    margin-top: 20px;
+    height: 15.625em;
+    margin-top: 1em;
     width: 100%;
     text-align: center;
 }
 
 footer img {
-    width: 300px;
+    width: 18.75em;
     margin: 0px auto;
-    margin-top: 50px;
+    margin-top: 3em;
 }
 
 article a > img {
@@ -190,10 +189,10 @@ article a > img {
 }
 
 article li:first-of-type button {
-    width: 40px;
+    width: 3em;
     background-image: url(../Images/likeicon.svg);
     background-color: transparent;
-    margin-left: 5px;
+    margin-left: .5em;
     border: 0px;
     background-repeat: no-repeat;
     padding-top: 40px;
@@ -202,11 +201,11 @@ article li:first-of-type button {
 }
 
 article li:last-of-type button {
-    width: 40px;
+    width: 3em;
     background-image: url(../Images/downloadicon.svg);
     background-color: transparent;
     background-position: top;
-    background-size: 40px;
+    background-size: 3em;
     border: 0px;
     background-repeat: no-repeat;
     padding-top: 40px;
@@ -229,10 +228,10 @@ main section article {
     flex-direction: column;
     border: 1px solid #88AFAF;
     width: 90%;
-    max-width: 350px;
+    max-width: 21.900em;
     margin: 0 auto;
     flex: 0 0 auto;
-    margin-right: 5px;
+    margin-right: .5em;
     scroll-snap-align: center;
 }
 
@@ -241,14 +240,14 @@ section article ul {
     justify-content: space-between;
 }
 
-article h3 {
+article h4 {
     text-align: center;
-    margin-bottom: 5;
+    margin-bottom: .5em;
     margin-top: 0px;
 }
 
 main section {
-    margin-bottom: 5px;
+    margin-bottom: .5em;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -263,20 +262,20 @@ main > section::-webkit-scrollbar {
     display: none;
 }
 
-main section h2 {
+main section h3 {
     display: none;
 }
 
 footer p {
     color: #2b4040;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 
 footer ul {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    max-width: 500px;
+    max-width: 31.25em;
     margin: 0px auto;
 
 }
@@ -284,8 +283,8 @@ footer ul {
 footer ul img {
     border-radius: 50%;
     background-color: #d0c9c2;
-    height: 35px;
-    width: 35px;
+    height: 2em;
+    width: 2em;
     margin-top: 0px;
 }
 
