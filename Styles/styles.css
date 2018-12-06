@@ -1,14 +1,14 @@
 body {
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    margin: 0;
     font-family: museo-sans, sans-serif;
     color: #2b4040;
 }
 
 ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -40,7 +40,7 @@ main {
 }
 
 #welkom img {
-    height: 300px;
+    height: 18.75em;
     padding: 1em;
 }
 
@@ -55,7 +55,7 @@ header > ul {
     justify-content: space-between;
     border-bottom: 1px solid #88AFAF;
     height: 3.5em;
-    padding-top: 3px;
+    padding-top: 0.1875em;
 }
 
 header ul li a img {
@@ -64,7 +64,7 @@ header ul li a img {
 
 header ul li button {
     background-image: url(../Images/filterenicon.svg);
-    border: 0px;
+    border: 0;
     background-color: transparent;
     background-repeat: no-repeat;
     padding-top: 3.1em;
@@ -76,9 +76,9 @@ header ul li button {
 
 header button {
     background-color: white;
-    border: 0px;
+    border: 0;
     width: 2.5em;
-    padding: 0px;
+    padding: 0;
 }
 
 header ul li:last-of-type a img {
@@ -87,9 +87,9 @@ header ul li:last-of-type a img {
 
 header form p:last-of-type input[type=submit] {
     -webkit-appearance: none;
-    margin: 0px;
+    margin: 0;
     border: 1px solid #2b4040;
-    border-radius: 4px;
+    border-radius: 0.25em;
     height: 3em;
     line-height: 3em;
     background-color: white;
@@ -100,22 +100,22 @@ header form p:last-of-type input[type=submit] {
 
 header p:last-of-type {
     width: 19%;
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: 1%;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 header p:first-of-type {
     width: 80%;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 header form p:first-of-type input[type=search] {
     -webkit-appearance: none;
-    margin: 0px;
+    margin: 0;
     border: 1px solid #2b4040;
-    border-radius: 4px;
+    border-radius: 0.25em;
     height: 3em;
     line-height: 3em;
     width: 100%;
@@ -138,7 +138,7 @@ header form:last-of-type {
     display: flex;
     justify-content: space-between;
     max-width: 37.5em;
-    margin: 0px auto 0px auto;
+    margin: 0 auto 0 auto;
 }
 
 header form label {
@@ -156,9 +156,9 @@ input[type=radio] + label {
 
 input[type=radio]:checked + label {
     background-color: #FEDF5C;
-    border-radius: 10px;
+    border-radius: 0.625em;
     color: #2b4040;
-    padding: 5px;
+    padding: 0.3125em;
 
 }
 
@@ -194,10 +194,10 @@ article li:first-of-type button {
     background-image: url(../Images/likeicon.svg);
     background-color: transparent;
     margin-left: .5em;
-    border: 0px;
+    border: 0;
     background-repeat: no-repeat;
-    padding-top: 40px;
-    font-size: 12px;
+    padding-top: 2.5em;
+    font-size: 0.75em;
     color: #2b4040;
 }
 
@@ -207,11 +207,11 @@ article li:last-of-type button {
     background-color: transparent;
     background-position: top;
     background-size: 3em;
-    border: 0px;
+    border: 0;
     background-repeat: no-repeat;
-    padding-top: 40px;
-    padding-right: 65px;
-    font-size: 12px;
+    padding-top: 2.5em;
+    padding-right: 4.0625em;
+    font-size: 0.75em;
     color: #2b4040;
 }
 
@@ -220,8 +220,8 @@ article span {
 }
 
 span li:last-of-type {
-    padding-top: 15px;
-    padding-left: 5px;
+    padding-top: 0.9375em;
+    padding-left: 0.3125em;
 }
 
 main section article {
@@ -244,7 +244,7 @@ section article ul {
 article h4 {
     text-align: center;
     margin-bottom: .5em;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 main section {
@@ -277,7 +277,7 @@ footer ul {
     justify-content: space-between;
     width: 80%;
     max-width: 31.25em;
-    margin: 0px auto;
+    margin: 0 auto;
 
 }
 
@@ -286,7 +286,7 @@ footer ul img {
     background-color: #d0c9c2;
     height: 2em;
     width: 2em;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 #facebook:hover {
