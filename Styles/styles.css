@@ -9,7 +9,6 @@ body {
 ul {
     margin: 0;
     padding: 0;
-
 }
 
 li {
@@ -21,14 +20,13 @@ a {
 
 }
 
+h2 {
+    margin-left: .70em;
+}
+
 header {
     background-color: white;
     padding-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-main {
     margin-left: 1em;
     margin-right: 1em;
 }
@@ -37,6 +35,7 @@ main {
     display: flex;
     justify-content: space-between;
     background-color: #fcdd67;
+    margin: 0;
 }
 
 #welkom img {
@@ -45,12 +44,17 @@ main {
 }
 
 #welkom h1 {
-    padding: 1em;
+    padding-left: 1rem;
     color: #2b4040;
-    max-width: 50%;
+    margin-top: 5rem;
+}
+#welkom span p {
+    padding-left: 1rem;
+    margin: 0;
+    color: #2b4040;
 }
 
-header > ul {
+header nav > ul {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #88AFAF;
@@ -58,11 +62,11 @@ header > ul {
     padding-top: 0.1875em;
 }
 
-header ul li a img {
+header nav ul li a img {
     width: 4.125em;
 }
 
-header ul li button {
+header nav ul li button {
     background-image: url(../Images/filterenicon.svg);
     border: 0;
     background-color: transparent;
@@ -70,8 +74,15 @@ header ul li button {
     padding-top: 3.1em;
     font-size: 0.75em;
     color: #2b4040;
-    width: 3.1em;
+    width: 2.5em;
 
+}
+
+header nav ul li button:focus {
+    color: #982682;
+}
+header nav ul li button:hover {
+    color: #982682;
 }
 
 header button {
@@ -81,7 +92,7 @@ header button {
     padding: 0;
 }
 
-header ul li:last-of-type a img {
+header nav ul li:last-of-type a img {
     width: 2.5em;
 }
 
@@ -96,6 +107,15 @@ header form p:last-of-type input[type=submit] {
     color: #2b4040;
     font-size: 0.75;
     width: 100%;
+}
+
+header form p:last-of-type input[type=submit]:focus {
+    color: #982682;
+    border: 1px solid #982682;
+}
+header form p:last-of-type input[type=submit]:hover {
+    color: #982682;
+    border: 1px solid #982682;
 }
 
 header p:last-of-type {
@@ -120,6 +140,10 @@ header form p:first-of-type input[type=search] {
     line-height: 3em;
     width: 100%;
     padding-left: 1em;
+}
+
+header form p:first-of-type label {
+    display: none;
 }
 
 p > input {
@@ -190,15 +214,22 @@ article a > img {
 }
 
 article li:first-of-type button {
-    width: 3em;
+    width: em;
     background-image: url(../Images/likeicon.svg);
     background-color: transparent;
     margin-left: .5em;
     border: 0;
     background-repeat: no-repeat;
-    padding-top: 2.5em;
+    padding-top: 3em;
     font-size: 0.75em;
     color: #2b4040;
+}
+
+article li:first-of-type button:focus {
+    color: #982682;
+}
+article li:first-of-type button:hover {
+    color: #982682;
 }
 
 article li:last-of-type button {
@@ -209,10 +240,17 @@ article li:last-of-type button {
     background-size: 3em;
     border: 0;
     background-repeat: no-repeat;
-    padding-top: 2.5em;
-    padding-right: 4.0625em;
+    padding-top: 3em;
+    padding-right: 5em;
     font-size: 0.75em;
     color: #2b4040;
+}
+
+article li:last-of-type button:focus {
+    color: #982682;
+}
+article li:last-of-type button:hover {
+    color: #982682;
 }
 
 article span {
@@ -224,7 +262,7 @@ span li:last-of-type {
     padding-left: 0.3125em;
 }
 
-main section article {
+section article {
     display: flex;
     flex-direction: column;
     border: 1px solid #88AFAF;
@@ -234,22 +272,33 @@ main section article {
     flex: 0 0 auto;
     margin-right: .5em;
     scroll-snap-align: center;
+    height: 24rem;
 }
 
 section article ul {
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
+    padding: .5rem;
 }
-
+article ul > li:first-of-type {
+    padding-top: 1em;
+}
 article h4 {
-    text-align: center;
-    margin-bottom: .5em;
+    margin-bottom: 0;
     margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-bottom: 5px solid #fcdd67;
+    padding-bottom: .5rem;
+
 }
 
-main section {
+section {
     margin-bottom: .5em;
     display: flex;
+    margin-left: 1em;
+    margin-right: 1em;
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
@@ -259,11 +308,11 @@ main section {
     /* important for iOS */
 }
 
-main > section::-webkit-scrollbar {
+section::-webkit-scrollbar {
     display: none;
 }
 
-main section h3 {
+section h3 {
     display: none;
 }
 
@@ -311,4 +360,27 @@ footer ul img {
 
 #tripadvaisor:hover {
     background-color: #00af87;
+}
+a:focus #facebook{
+    background-color: #3b5998 !important;
+}
+
+a:focus #twetter{
+    background-color: #00aced !important;
+}
+
+a:focus #instagram{
+    background-color: #8a3ab9 !important;
+}
+
+a:focus #pinterest{
+    background-color: #c8232c !important;
+}
+
+a:focus #youtube{
+    background-color: #ff0000 !important;
+}
+
+a:focus #tripadvaisor{
+    background-color: #00af87 !important;
 }
