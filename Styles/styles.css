@@ -9,7 +9,7 @@
 
 @keyframes voorbeeldTwee {
     10% {
-        font-size: 2.5em;
+        font-size: 2.1em;
     }
     100% {
         color: #982682;
@@ -83,7 +83,7 @@ a {
 }
 
 h2 {
-    margin-left: .70em;
+    margin-left: 1rem;
 }
 
 body > h1 {
@@ -726,6 +726,7 @@ body > form input[type=submit] {
 
 body > form {
     margin: 0 1em;
+    width: 91.50;
 }
 
 body > form fieldset {
