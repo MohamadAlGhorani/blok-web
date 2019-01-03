@@ -1,8 +1,70 @@
+@keyframes voorbeeld {
+    10% {
+        font-size: 1.5em;
+    }
+    100% {
+        color: #982682;
+    }
+}
+
+@keyframes voorbeeldTwee {
+    10% {
+        font-size: 2.5em;
+    }
+    100% {
+        color: #982682;
+    }
+}
+
+
+header form:nth-of-type(2) {
+    position: absolute;
+    background-color: white;
+    height: 46rem;
+    top: 4.9rem;
+    left: 0rem;
+    width: 23em;
+    margin-left: -24rem;
+    transition: all 0.5s cubic-bezier(.38, 1.34, .72, -0.18);
+    z-index: 1;
+}
+
+header form:nth-of-type(2).filteren {
+    position: absolute;
+    background-color: white;
+    height: 46rem;
+    top: 4.9rem;
+    left: 0rem;
+    width: 100%;
+    margin-left: 0rem;
+    z-index: 1;
+}
+
+header form:nth-of-type(2) p {
+    margin-left: 0;
+}
+
+header form:nth-of-type(2) p label {
+    margin-left: 0;
+}
+
+header form:nth-of-type(2) p input[type=checkbox] {
+    margin-left: 0;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
     font-family: museo-sans, sans-serif;
+    color: #2b4040;
+}
+
+body > p {
+    margin-left: 1rem;
+    animation-name: voorbeeld;
+    animation-duration: 2s;
     color: #2b4040;
 }
 
@@ -24,11 +86,18 @@ h2 {
     margin-left: .70em;
 }
 
+body > h1 {
+    margin-left: 1rem;
+    animation-name: voorbeeldTwee;
+    animation-duration: 2s;
+}
+
 header {
     background-color: white;
     padding-bottom: 1em;
     margin-left: 1em;
     margin-right: 1em;
+    margin-top: .5em
 }
 
 #welkom {
@@ -41,6 +110,11 @@ header {
 #welkom img {
     height: 18.75em;
     padding: 1em;
+    background-image: url(../Images/wowclub-lady-3.min.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 11.5rem;
+    background-size: 6.5rem;
 }
 
 #welkom h1 {
@@ -48,6 +122,7 @@ header {
     color: #2b4040;
     margin-top: 5rem;
 }
+
 #welkom span p {
     padding-left: 1rem;
     margin: 0;
@@ -62,30 +137,48 @@ header nav > ul {
     padding-top: 0.1875em;
 }
 
-header nav ul li a img {
+header nav ul li:nth-of-type(2) a img {
     width: 4.125em;
+    margin-left: 2rem;
 }
 
-header nav ul li button {
+header nav ul li:first-of-type button {
     background-image: url(../Images/filterenicon.svg);
     border: 0;
     background-color: transparent;
     background-repeat: no-repeat;
+    background-size: 2.5rem;
     padding-top: 3.1em;
     font-size: 0.75em;
     color: #2b4040;
-    width: 2.5em;
+    width: 4em;
+    background-position: top;
 
 }
 
-header nav ul li button:focus {
+header nav ul li:first-of-type button.che {
+    background-image: url(../Images/close.svg);
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    padding-top: 3.1em;
+    font-size: 0.75em;
+    color: #2b4040;
+    width: 4em;
+    background-position: top;
+
+}
+
+header nav ul li:first-of-type button:focus {
     color: #982682;
 }
-header nav ul li button:hover {
+
+header nav ul li:first-of-type button:hover {
     color: #982682;
 }
 
-header button {
+header li:first-of-type button {
     background-color: white;
     border: 0;
     width: 2.5em;
@@ -93,7 +186,31 @@ header button {
 }
 
 header nav ul li:last-of-type a img {
-    width: 2.5em;
+    width: 2rem;
+    border: 1px solid #982682;
+    border-radius: 4px;
+    height: 1.5rem;
+    margin-top: .5rem;
+}
+
+header nav li:last-of-type {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+header nav li:last-of-type button {
+    background-image: url(../Images/searchicon.svg);
+    background-position: center;
+    background-size: 2em;
+    border: 1px solid #982682;
+    border-radius: 4px;
+    height: 1.6rem;
+    width: 2.1rem;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin-top: .5rem;
+    margin-right: .25rem;
 }
 
 header form p:last-of-type input[type=submit] {
@@ -102,30 +219,31 @@ header form p:last-of-type input[type=submit] {
     border: 1px solid #2b4040;
     border-radius: 0.25em;
     height: 3em;
-    line-height: 3em;
-    background-color: white;
-    color: #2b4040;
+    line-height: 2.5em;
+    background-color: #982682;
+    color: white;
     font-size: 0.75;
     width: 100%;
 }
 
 header form p:last-of-type input[type=submit]:focus {
-    color: #982682;
-    border: 1px solid #982682;
-}
-header form p:last-of-type input[type=submit]:hover {
-    color: #982682;
+    color: #fcdd67;
     border: 1px solid #982682;
 }
 
-header p:last-of-type {
+header form p:last-of-type input[type=submit]:hover {
+    color: #fcdd67;
+    border: 1px solid #982682;
+}
+
+header form:first-of-type p:last-of-type {
     width: 19%;
     margin-top: 0;
     margin-left: 1%;
     margin-bottom: 0;
 }
 
-header p:first-of-type {
+header form:first-of-type p:first-of-type {
     width: 80%;
     margin-top: 0;
     margin-bottom: 0;
@@ -142,7 +260,7 @@ header form p:first-of-type input[type=search] {
     padding-left: 1em;
 }
 
-header form p:first-of-type label {
+header form:first-of-type p:first-of-type label {
     display: none;
 }
 
@@ -156,6 +274,14 @@ header form:first-of-type {
     height: 3em;
     margin-top: 1em;
     display: flex;
+    display: none;
+}
+
+header form:first-of-type.zoeken {
+    width: 100%;
+    height: 3em;
+    margin-top: 1em;
+    display: flex;
 }
 
 header form:last-of-type {
@@ -163,9 +289,10 @@ header form:last-of-type {
     justify-content: space-between;
     max-width: 37.5em;
     margin: 0 auto 0 auto;
+    margin-top: 1rem;
 }
 
-header form label {
+header form:first-of-type label {
     cursor: pointer;
 }
 
@@ -214,7 +341,6 @@ article a > img {
 }
 
 article li:first-of-type button {
-    width: em;
     background-image: url(../Images/likeicon.svg);
     background-color: transparent;
     margin-left: .5em;
@@ -223,11 +349,20 @@ article li:first-of-type button {
     padding-top: 3em;
     font-size: 0.75em;
     color: #2b4040;
+
+}
+
+article li:first-of-type button.ani {
+    transition: all .2s ease-in-out .1s;
+    transform: scale(1.2);
+    background-image: url(../Images/like2.svg);
+    color: #982682;
 }
 
 article li:first-of-type button:focus {
     color: #982682;
 }
+
 article li:first-of-type button:hover {
     color: #982682;
 }
@@ -249,6 +384,7 @@ article li:last-of-type button {
 article li:last-of-type button:focus {
     color: #982682;
 }
+
 article li:last-of-type button:hover {
     color: #982682;
 }
@@ -267,12 +403,12 @@ section article {
     flex-direction: column;
     border: 1px solid #88AFAF;
     width: 90%;
-    max-width: 21.900em;
+    max-width: 20em;
     margin: 0 auto;
     flex: 0 0 auto;
     margin-right: .5em;
     scroll-snap-align: center;
-    height: 24rem;
+    height: 25rem;
 }
 
 section article ul {
@@ -281,9 +417,11 @@ section article ul {
     margin-top: auto;
     padding: .5rem;
 }
+
 article ul > li:first-of-type {
     padding-top: 1em;
 }
+
 article h4 {
     margin-bottom: 0;
     margin-top: 0;
@@ -308,7 +446,7 @@ section {
     /* important for iOS */
 }
 
-section::-webkit-scrollbar {
+body section::-webkit-scrollbar {
     display: none;
 }
 
@@ -361,26 +499,398 @@ footer ul img {
 #tripadvaisor:hover {
     background-color: #00af87;
 }
-a:focus #facebook{
+
+a:focus #facebook {
     background-color: #3b5998 !important;
 }
 
-a:focus #twetter{
+a:focus #twetter {
     background-color: #00aced !important;
 }
 
-a:focus #instagram{
+a:focus #instagram {
     background-color: #8a3ab9 !important;
 }
 
-a:focus #pinterest{
+a:focus #pinterest {
     background-color: #c8232c !important;
 }
 
-a:focus #youtube{
+a:focus #youtube {
     background-color: #ff0000 !important;
 }
 
-a:focus #tripadvaisor{
+a:focus #tripadvaisor {
     background-color: #00af87 !important;
+}
+
+fieldset {
+    border: 0;
+    width: 90.5%;
+    padding: 1rem;
+}
+
+legend {
+    margin-left: 1rem;
+    font-size: 1.4em;
+    margin-top: 2rem;
+}
+
+input[type=checkbox] {
+    visibility: visible;
+}
+
+header form:nth-of-type(2) input[type=submit] {
+    visibility: visible;
+    -webkit-appearance: none;
+    border-radius: 0.25em;
+    line-height: 2em;
+    background-color: #982682;
+    color: white;
+    font-size: 1em;
+    width: 8rem;
+    margin: 0 auto;
+    height: 2.5em;
+}
+
+input[type=range] {
+    visibility: visible;
+}
+
+article header {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+article header button {
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    background-image: url(../Images/favorietleeg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3em;
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+    border: 0;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6.7px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #ffffff;
+    border-radius: 25px;
+    border: 1.2px solid rgba(0, 0, 0, 0.25);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 2.1px 2.1px 4.5px rgba(0, 0, 0, 0.46), 0px 0px 2.1px rgba(13, 13, 13, 0.46);
+    border: 2.7px solid #ffffff;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: #982682;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9.35px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+}
+
+input[type=range]::-moz-range-track {
+    width: 90%;
+    height: 6.7px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #ffffff;
+    border-radius: 25px;
+    border: 1.2px solid rgba(0, 0, 0, 0.25);
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 2.1px 2.1px 4.5px rgba(0, 0, 0, 0.46), 0px 0px 2.1px rgba(13, 13, 13, 0.46);
+    border: 2.7px solid #ffffff;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: #982682;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 90%;
+    height: 6.7px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #808080;
+    border: 1.2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #ffffff;
+    border: 1.2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 2.1px 2.1px 4.5px rgba(0, 0, 0, 0.46), 0px 0px 2.1px rgba(13, 13, 13, 0.46);
+    border: 2.7px solid #ffffff;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: #982682;
+    cursor: pointer;
+    height: 6.7px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #ffffff;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #ffffff;
+}
+
+header form:nth-of-type(2) fieldset:nth-of-type(2) p {
+    margin-top: 1.5em;
+}
+
+header form:nth-of-type(2) fieldset:first-of-type p:first-of-type {
+    margin-top: 0;
+}
+
+header form:nth-of-type(2) fieldset:first-of-type p:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+header form:nth-of-type(2) fieldset:first-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+body > form input[type=password],
+input[type=text] {
+    -webkit-appearance: none;
+    position: static;
+    visibility: visible;
+    border: 1px solid black;
+    display: block;
+    margin-top: .3rem;
+    width: 98.5%;
+    height: 3em;
+}
+
+body > form label {}
+
+body > form input[type=submit] {
+    -webkit-appearance: none;
+    float: right;
+    position: static;
+    visibility: visible;
+    background-color: #982682;
+    border-radius: 4px;
+    color: white;
+    width: 8rem;
+    border: 1px solid #982682;
+    height: 2.5em;
+    font-size: 1em;
+    margin: 0;
+}
+
+body > form {
+    margin: 0 1em;
+}
+
+body > form fieldset {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body > form legend {
+    margin-left: 0;
+}
+
+@media (min-width:500px) {
+    header form:nth-of-type(2) {
+        position: absolute;
+        background-color: white;
+        height: 59rem;
+        top: 4.9rem;
+        left: 0rem;
+        width: 23em;
+        margin-left: -24rem;
+        transition: all 0.5s cubic-bezier(.38, 1.34, .72, -0.18);
+        z-index: 1;
+    }
+
+    header form:nth-of-type(2).filteren {
+        position: absolute;
+        background-color: white;
+        height: 59rem;
+        top: 4.9rem;
+        left: 0rem;
+        width: 23em;
+        margin-left: 0rem;
+        z-index: 1;
+    }
+    header {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+    }
+    section {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+    }
+    h2 {
+        margin-left: 2.5rem
+    }
+    body > p {
+        margin-left: 2.5em;
+    }
+    body > form {
+        margin-left: 2.5em;
+        width: 20em;
+    }
+    body > h1 {
+        margin-left: 2.5rem;
+    }
+    #welkom img {
+        height: 18.75em;
+        padding: 1em;
+        background-image: url(../Images/wowclub-lady-3.min.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        width: 20rem;
+        background-size: 15rem;
+        margin-top: 1em;
+        margin-right: 2.5rem;
+        padding-right: 0;
+    }
+
+    #welkom h1 {
+        padding-left: 2.5rem;
+        color: #2b4040;
+        margin-top: 5rem;
+        font-size: 4em;
+        margin-bottom: .5em;
+    }
+
+    #welkom span p {
+        padding-left: 2.5rem;
+        margin: 0;
+        color: #2b4040;
+        font-size: 2em
+    }
+}
+
+@media (min-width:770px) {
+    body {
+        border: 8px solid #982682;
+    }
+    header nav ul li:nth-of-type(2) a img {
+        width: 6.785em;
+        margin-left: 2rem;
+    }
+    header > nav ul {
+        margin-bottom: 4em
+    }
+    header form:nth-of-type(2) {
+        position: absolute;
+        background-color: white;
+        height: 59rem;
+        top: 4.9rem;
+        left: 0rem;
+        width: 23em;
+        margin-left: -24rem;
+        transition: all 0.5s cubic-bezier(.38, 1.34, .72, -0.18);
+        z-index: 1;
+    }
+
+    header form:nth-of-type(2).filteren {
+        position: absolute;
+        background-color: white;
+        height: 59rem;
+        top: 4.9rem;
+        left: 0rem;
+        width: 23em;
+        margin-left: 0.5rem;
+        z-index: 1;
+    }
+    header {
+        margin-left: 4.375em;
+        margin-right: 4.375em;
+    }
+    section {
+        margin-left: 4.375em;
+        margin-right: 4.375em;
+    }
+    h2 {
+        margin-left: 4.375rem
+    }
+    body > p {
+        margin-left: 4.375em;
+    }
+    body > form {
+        margin-left: 4.375em;
+        width: 20em;
+    }
+    body > h1 {
+        margin-left: 4.375rem;
+    }
+    #welkom img {
+        height: 18.75em;
+        padding: 1em;
+        background-image: url(../Images/wowclub-lady-3.min.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        width: 20rem;
+        background-size: 15rem;
+        margin-top: 1em;
+        margin-right: 4.375rem;
+        padding-right: 0;
+    }
+
+    #welkom h1 {
+        padding-left: 4.375rem;
+        color: #2b4040;
+        margin-top: 5rem;
+        font-size: 4em;
+        margin-bottom: .5em;
+    }
+
+    #welkom span p {
+        padding-left: 4.375rem;
+        margin: 0;
+        color: #2b4040;
+        font-size: 2em
+    }
+
 }

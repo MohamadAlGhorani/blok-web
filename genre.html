@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>WOWair verhalen website</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="Styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/kks3qsr.css">
@@ -14,21 +15,44 @@
         <nav>
             <ul>
                 <li><button>Filteren</button></li>
-                <li><a href="overzichtpagina.html"><img src="Images/sitelogo.svg" alt=""></a></li>
-                <li><a href=""><img src="Images/profileicon.svg" alt=""></a></li>
+                <li><a href="index.html"><img src="Images/sitelogo.svg" alt=""></a></li>
+                <li>
+                    <button></button>
+                    <a href="profile.html"><img src="Images/profileicon.svg" alt=""></a></li>
             </ul>
         </nav>
         <form action="">
             <p>
-                <input type="search" placeholder="    zoeken.." name="zoek">
+                <input type="search" placeholder="zoeken.." name="zoek">
             </p>
             <p>
                 <input type="submit" name="zoek" value="ZOEK">
             </p>
         </form>
+        <form action="">
+            <legend>Aantal likes</legend>
+            <fieldset>
+                <p><input type="checkbox" id="">
+                    <label for="">0 tot 20</label></p>
+                <p><input type="checkbox" id="">
+                    <label for="">21 tot 40</label></p>
+                <p><input type="checkbox" id="">
+                    <label for="">41 tot 60</label></p>
+                <p><input type="checkbox" id="">
+                    <label for="">61 en meer</label></p>
+            </fieldset>
+            <legend>Leesduur</legend>
+            <fieldset>
+                <input type="range" min='1' max='30' value="15">
+                <p><span></span> minuten</p>
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="Toepassen" name="Toepassen">
+            </fieldset>
+        </form>
 
         <form action="">
-            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="genre">
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" checked="checked" id="genre">
             <label for="genre">Genre</label>
             <input class="sorteerOptie" type="radio" name="sorteerOptie" id="leesduur">
             <label for="leesduur">Leesduur</label>
@@ -39,147 +63,182 @@
             <input type="submit" name="sorteerOptie" value="verstuur">
         </form>
     </header>
-    <main>
-        <h2>Chaotisch</h2>
-        <section>
-            <h3>Chaotisch</h3>
-            <article>
+    <p>Uw hebt gesorteerd op genre</p>
+    <h2>Chaotisch</h2>
+    <section>
+        <h3>Chaotisch</h3>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-            <article>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-            <article>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-        </section>
-        <h2>Liefde</h2>
-        <section>
-            <h3>Liefde</h3>
-            <article>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+    </section>
+    <h2>Liefde</h2>
+    <section>
+        <h3>Liefde</h3>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Gefrustereerd</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Gefrustereerd</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>6 min</li>
-                    <li><button>Download</button></li>
-                </ul>
+                <li>6 min</li>
+                <li><button>Download</button></li>
+            </ul>
 
-            </article>
-            <article>
+        </article>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Gefrustereerd</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Gefrustereerd</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>6 min</li>
-                    <li><button>Download</button></li>
-                </ul>
+                <li>6 min</li>
+                <li><button>Download</button></li>
+            </ul>
 
-            </article>
-            <article>
+        </article>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Gefrustereerd</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Gefrustereerd</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>6 min</li>
-                    <li><button>Download</button></li>
-                </ul>
+                <li>6 min</li>
+                <li><button>Download</button></li>
+            </ul>
 
-            </article>
-        </section>
-        <h2>Horror</h2>
-        <section>
-            <h3>Horror</h3>
-            <article>
+        </article>
+    </section>
+    <h2>Horror</h2>
+    <section>
+        <h3>Horror</h3>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-            <article>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-            <article>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-        </section>
-        <h2>Humor</h2>
-        <section>
-            <h3>Humor</h3>
-            <article>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+    </section>
+    <h2>Humor</h2>
+    <section>
+        <h3>Humor</h3>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-            <article>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-            <article>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <button></button>
                 <a href=""><img src="Images/Unknown.jpg" alt=""></a>
-                <h4>Eric lucassen</h4>
-                <ul>
-                    <span><li><button>Like</button></li>
+            </header>
+            <h4>Eric lucassen</h4>
+            <ul>
+                <span><li><button>Like</button></li>
                     <li>50</li></span>
-                    <li>10 min</li>
-                    <li><button>Download</button></li>
-                </ul>
-            </article>
-        </section>
-    </main>
+                <li>10 min</li>
+                <li><button>Download</button></li>
+            </ul>
+        </article>
+    </section>
     <footer>
         <img src="Images/wow-logo-foot.min.png" alt="">
         <p>Neem contact met ons op</p>
