@@ -16,12 +16,12 @@ slider.oninput = function () {
 
 
 function formSubmit() {
-    form.action = ("/blok-web/js/genre.html");
+    form.action = ("blok-web/genre.html");
     form.submit();
 }
 
 function formSubmitTwee() {
-    form.action = ("/blok-web/js/verrasme.html");
+    form.action = ("blok-web/verrasme.html");
     form.submit();
 }
 
