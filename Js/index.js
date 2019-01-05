@@ -16,12 +16,12 @@ slider.oninput = function () {
 
 
 function formSubmit() {
-    form.action = "../genre.html";
+    form.action = "/genre.html";
     form.submit();
 }
 
 function formSubmitTwee() {
-    form.action = "../verrasme.html";
+    form.action = "/verrasme.html";
     form.submit();
 }
 
