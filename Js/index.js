@@ -16,13 +16,13 @@ slider.oninput = function () {
 
 
 function formSubmit() {
-    form.action = "../block-web/genre.html";
+    form.action = "/block-web/genre.html";
     form.submit();
     event.preventDefault();
 }
 
 function formSubmitTwee() {
-    form.action = "../block-web/verrasme.html";
+    form.action = "/block-web/verrasme.html";
     form.submit();
     event.preventDefault();
 }
