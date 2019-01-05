@@ -5,6 +5,7 @@ var formFilter = document.querySelector('header form:nth-of-type(2)');
 var search = document.querySelector('header nav li:last-of-type button');
 var formSearch = document.querySelector('header form:first-of-type');
 var like = document.querySelector('article li:first-of-type button');
+var verrasMe = document.querySelector('header form:last-of-type input:nth-of-type(4)');
 
 var slider = document.querySelector("header input[type=range]");
 var output = document.querySelector("header form:nth-of-type(2) fieldset:nth-of-type(2) p span");
@@ -15,6 +16,12 @@ slider.oninput = function () {
 
 
 function formSubmit() {
+    form.action = "../genre.html";
+    form.submit();
+}
+
+function formSubmitTwee() {
+    form.action = "../verrasme.html";
     form.submit();
 }
 
@@ -35,6 +42,7 @@ function terug() {
 }
 
 genre.addEventListener('click', formSubmit);
+verrasMe.addEventListener('click', formSubmitTwee);
 filter.addEventListener('click', filteren);
 search.addEventListener('click', zoeken);
 like.addEventListener('click', likeFunctie);
