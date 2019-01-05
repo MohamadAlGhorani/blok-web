@@ -198,18 +198,52 @@ header li:first-of-type button {
     padding: 0;
 }
 
-header nav ul li:last-of-type a img {
-    width: 2rem;
-    border: 1px solid #982682;
-    border-radius: .25em;
-    height: 1.5rem;
-    margin-top: .5rem;
-}
-
 header nav li:last-of-type {
     display: flex;
     justify-content: space-around;
 
+}
+
+header nav li:last-of-type a {
+    background-image: url(../Images/profileicon.svg);
+    background-position: center;
+    background-size: 1.6em;
+    border: 1px solid #982682;
+    border-radius: .25em;
+    height: 1.5rem;
+    width: 2rem;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin-top: .5rem;
+    margin-right: .25rem;
+}
+
+header nav li:last-of-type a:hover {
+    background-image: url(../Images/whiteprofile.svg);
+    background-position: center;
+    background-size: 1.6em;
+    border: 1px solid #982682;
+    border-radius: .25em;
+    height: 1.5rem;
+    width: 2rem;
+    background-color: #982682;
+    background-repeat: no-repeat;
+    margin-top: .5rem;
+    margin-right: .25rem;
+}
+
+header nav li:last-of-type a:focus {
+    background-image: url(../Images/whiteprofile.svg);
+    background-position: center;
+    background-size: 1.6em;
+    border: 1px solid #982682;
+    border-radius: .25em;
+    height: 1.5rem;
+    width: 2rem;
+    background-color: #982682;
+    background-repeat: no-repeat;
+    margin-top: .5rem;
+    margin-right: .25rem;
 }
 
 header nav li:last-of-type button {
@@ -226,12 +260,40 @@ header nav li:last-of-type button {
     margin-right: .25rem;
 }
 
+header nav li:last-of-type button:hover {
+    background-image: url(../Images/searchiconWhite.svg);
+    background-position: center;
+    background-size: 2em;
+    border: 1px solid #982682;
+    border-radius: .25em;
+    height: 1.6rem;
+    width: 2.1rem;
+    background-color: #982682;
+    background-repeat: no-repeat;
+    margin-top: .5rem;
+    margin-right: .25rem;
+}
+
+header nav li:last-of-type button:focus {
+    background-image: url(../Images/searchiconWhite.svg);
+    background-position: center;
+    background-size: 2em;
+    border: 1px solid #982682;
+    border-radius: .25em;
+    height: 1.6rem;
+    width: 2.1rem;
+    background-color: #982682;
+    background-repeat: no-repeat;
+    margin-top: .5rem;
+    margin-right: .25rem;
+}
+
 header form p:last-of-type input[type=submit] {
     -webkit-appearance: none;
     margin: 0;
-    border: 1px solid #2b4040;
+    border: 1px solid #982682;
     border-radius: 0.25em;
-    height: 3em;
+    height: 2rem;
     line-height: 2.5em;
     background-color: #982682;
     color: white;
@@ -241,13 +303,15 @@ header form p:last-of-type input[type=submit] {
 }
 
 header form p:last-of-type input[type=submit]:focus {
-    color: #fcdd67;
-    border: 1px solid #982682;
+    color: white;
+    background-color: #701b67;
+    border-color: #53144d;
 }
 
 header form p:last-of-type input[type=submit]:hover {
-    color: #fcdd67;
-    border: 1px solid #982682;
+    color: white;
+    background-color: #701b67;
+    border-color: #53144d;
 }
 
 header form:first-of-type p:last-of-type {
@@ -266,12 +330,20 @@ header form:first-of-type p:first-of-type {
 header form p:first-of-type input[type=search] {
     -webkit-appearance: none;
     margin: 0;
-    border: 1px solid #2b4040;
+    border: 1px solid #979696;
     border-radius: 0.25em;
-    height: 3em;
+    height: 2rem;
     line-height: 3em;
     width: 100%;
     padding-left: 1em;
+}
+
+header form p:first-of-type input[type=search]:focus {
+    -webkit-appearance: none;
+    border-color: #99258d;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(153, 37, 141, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(153, 37, 141, 0.6);
 }
 
 header form:first-of-type p:first-of-type label {
@@ -321,6 +393,22 @@ input[type=radio] + label {
 
 input[type=radio]:checked + label {
     background-color: #FEDF5C;
+    border-radius: 0.625em;
+    color: #2b4040;
+    padding: 0.3125em;
+
+}
+
+input[type=radio]:hover + label {
+    background: rgba(239, 192, 48, 0.4);
+    border-radius: 0.625em;
+    color: #2b4040;
+    padding: 0.3125em;
+
+}
+
+input[type=radio]:focus + label {
+    background: rgba(239, 192, 48, 0.4);
     border-radius: 0.625em;
     color: #2b4040;
     padding: 0.3125em;
@@ -570,6 +658,18 @@ header form:nth-of-type(2) input[type=submit] {
     font-weight: 700;
 }
 
+header form:nth-of-type(2) input[type=submit]:focus {
+    color: white;
+    background-color: #701b67;
+    border-color: #53144d;
+}
+
+header form:nth-of-type(2) input[type=submit]:hover {
+    color: white;
+    background-color: #701b67;
+    border-color: #53144d;
+}
+
 input[type=range] {
     visibility: visible;
 }
@@ -717,7 +817,7 @@ input[type=text] {
     -webkit-appearance: none;
     position: static;
     visibility: visible;
-    border: 1px solid black;
+    border: 1px solid #979696;
     display: block;
     margin-top: .3125rem;
     margin-bottom: 0.9375rem;
@@ -725,6 +825,22 @@ input[type=text] {
     height: 3em;
     padding-left: 1em;
     border-radius: 0.25em;
+}
+
+body > form fieldset input[type=password]:focus {
+    -webkit-appearance: none;
+    border-color: #99258d;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(153, 37, 141, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(153, 37, 141, 0.6);
+}
+
+body > form fieldset input[type=text]:focus {
+    -webkit-appearance: none;
+    border-color: #99258d;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(153, 37, 141, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(153, 37, 141, 0.6);
 }
 
 body > form label {
@@ -745,6 +861,18 @@ body > form input[type=submit] {
     font-size: 1em;
     margin: 0;
     font-weight: 700;
+}
+
+body > form input[type=submit]:hover {
+    color: white;
+    background-color: #701b67;
+    border-color: #53144d;
+}
+
+body > form input[type=submit]:focus {
+    color: white;
+    background-color: #701b67;
+    border-color: #53144d;
 }
 
 body > form {
