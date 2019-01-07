@@ -32,7 +32,7 @@ function likeNummer() {
 }
 
 function formSubmit() {
-    form.action = "/genre.html";
+    form.action = "genre.html";
     form.submit();
 }
 
