@@ -4,7 +4,8 @@ var filter = document.querySelector('header nav ul li button');
 var formFilter = document.querySelector('header form:nth-of-type(2)');
 var search = document.querySelector('header nav li:last-of-type button');
 var formSearch = document.querySelector('header form:first-of-type');
-var like = document.querySelector('article li:first-of-type button');
+var like = document.querySelectorAll('article li:first-of-type button');
+console.log("like",like);
 var favorit = document.querySelector('section article header button');
 var verrasMe = document.querySelector('header form:last-of-type input:nth-of-type(4)');
 var likeElement = document.querySelector('body section article ul span li:last-of-type');
@@ -37,7 +38,7 @@ function formSubmit() {
 }
 
 function formSubmitTwee() {
-    form.action = "/verrasme.html";
+    form.action = "verrasme.html";
     form.submit();
 }
 
@@ -65,8 +66,21 @@ genre.addEventListener('click', formSubmit);
 verrasMe.addEventListener('click', formSubmitTwee);
 filter.addEventListener('click', filteren);
 search.addEventListener('click', zoeken);
-like.addEventListener('click', likeFunctie);
+
+for(var i=0;i<like.length; i++){
+    like[i].addEventListener("click",function(){
+  console.log(this);
+    this.classList.toggle('ani');
+});
+}//end for
+
+
+
+
+//like[0].addEventListener('click', likeFunctie);
+
 favorit.addEventListener('click', favorietFunctie);
 filter.addEventListener('click', terug);
-like.addEventListener('click', likeNummer);
+
+//like.addEventListener('click', likeNummer);
 
