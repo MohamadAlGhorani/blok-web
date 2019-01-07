@@ -1,9 +1,26 @@
+@font-face {
+    font-family: 'aggressive';
+    src: url('../Fonts/aggressive/Aggressive.ttf')
+}
+
 @keyframes voorbeeld {
     10% {
         font-size: 1.5em;
     }
     100% {
         color: #982682;
+    }
+}
+
+@keyframes voorbeeldOne {
+    10% {
+        font-size: 1.5em;
+    }
+    100% {
+        color: white;
+    }
+    10% {
+        color: red;
     }
 }
 
@@ -696,6 +713,22 @@ article header button {
     border: 0;
 }
 
+article header button.ani {
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    background-image: url(../Images/favoriet.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 3em;
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+    border: 0;
+}
+
 input[type=range] {
     -webkit-appearance: none;
     width: 90%;
@@ -913,6 +946,42 @@ legend img {
 
 }
 
+body.verhaal section {
+    overflow-x: hidden;
+}
+
+body.verhaal section article {
+    width: 99.7%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body.verhaal section article header {
+    width: 100%;
+    max-width: 100%;
+    height: 60em;
+    margin: 0;
+    background-image: url(../Images/verhaal.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+body.verhaal section article h4 {
+    padding-top: 1em;
+}
+
+body.verhaal section article header h1 {
+    font-family: 'aggressive';
+    font-size: 3em;
+    font-weight: 100;
+    width: 6em;
+    margin: 1em auto;
+    color: white;
+}
+
+
 @media (min-width:36.25em) {
     header form:nth-of-type(2) {
         position: absolute;
@@ -992,6 +1061,258 @@ legend img {
         margin: 0;
         color: #2b4040;
         font-size: 1.5em;
+    }
+    body.verhaal section {
+        overflow-x: none;
+    }
+    body.verhaal section article {
+        width: 99.8%;
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    body.verhaal section article header {
+        width: 100%;
+        max-width: 100%;
+        height: 60em;
+        margin: 0;
+        background-image: url(../Images/verhaal.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    body.verhaal section article h4 {
+        padding-top: 1em;
+    }
+    body.verhaal section article header h1 {
+        font-family: 'aggressive';
+        font-size: 4em;
+        font-weight: 100;
+        width: 6em;
+        margin: .5em auto;
+        color: white;
+    }
+    body.verhaal section article header > div:last-of-type {
+        display: flex;
+        justify-content: space-between;
+        width: 35em;
+        position: absolute;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        z-index: 1;
+    }
+    body.verhaal section article header > div div:first-of-type p {
+        margin: 0;
+        padding: 0;
+        color: white;
+        width: 15em;
+    }
+    body.verhaal section article header > div div:first-of-type p span {
+        margin: .1em;
+        padding: 0;
+        color: white;
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.1em;
+        animation-name: voorbeeldOne;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    body.verhaal section article header > div div:last-of-type p {
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    body.verhaal section article header > div div:last-of-type p span {
+        margin: .1em;
+        padding: 0;
+        color: white;
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.1em;
+        animation-name: voorbeeldOne;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+    }
+
+    /**shape maken voor de letter k met een tekst**/
+    body.verhaal section article header > div div:last-of-type p:first-of-type {
+        margin-left: 6.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(2) {
+        margin-left: 6em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(3) {
+        margin-left: 5.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(4) {
+        margin-left: 5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(5) {
+        margin-left: 4.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(6) {
+        margin-left: 4em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(7) {
+        margin-left: 3.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(8) {
+        margin-left: 3em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(9) {
+        margin-left: 2.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(10) {
+        margin-left: 2em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(11) {
+        margin-left: 1.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(12) {
+        margin-left: 1em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(13) {
+        margin-left: .5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(14) {
+        margin-left: 0em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(15) {
+        margin-left: .5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(16) {
+        margin-left: 1em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(17) {
+        margin-left: 1.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(18) {
+        margin-left: 2em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(19) {
+        margin-left: 2.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(20) {
+        margin-left: 3em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(21) {
+        margin-left: 3.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(22) {
+        margin-left: 4em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(23) {
+        margin-left: 4.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(24) {
+        margin-left: 5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(25) {
+        margin-left: 5.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(26) {
+        margin-left: 6em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(27) {
+        margin-left: 6.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(28) {
+        margin-left: 7em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(29) {
+        margin-left: 7.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(30) {
+        margin-left: 8em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(31) {
+        margin-left: 8.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(32) {
+        margin-left: 9em;
+    }
+
+    /** annimation voor de spans van kolom twee **/
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(7) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(8) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 2s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(13) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 3.5s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(14) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 2.5s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(15) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.5s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(20) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.7s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(26) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.9s;
+    }
+
+
+    /** eerste kolom span annimation **/
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(4) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.9s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(9) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 2.5s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(15) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 3.5s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(21) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(23) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.6s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(24) span:first-of-type {
+        animation-name: voorbeeldOne;
+        animation-duration: 3s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(24) span:last-of-type {
+        animation-name: voorbeeldOne;
+        animation-duration: 2s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(27) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 5s;
+    }
+    body.verhaal section article header > div:first-of-type {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40em;
+        bottom: 0;
+        background-image: url(../Images/lootzak.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30em;
+        opacity: 0.7;
     }
 }
 
@@ -1093,6 +1414,257 @@ legend img {
     header nav li:last-of-type {
         margin-top: 2em;
 
+    }
+    body.verhaal section {
+        overflow-x: none;
+    }
+    body.verhaal section article {
+        width: 99.8%;
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    body.verhaal section article header {
+        width: 100%;
+        max-width: 100%;
+        height: 60em;
+        margin: 0;
+        background-image: url(../Images/verhaal.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    body.verhaal section article h4 {
+        padding-top: 1em;
+    }
+    body.verhaal section article header h1 {
+        font-family: 'aggressive';
+        font-size: 6em;
+        font-weight: 100;
+        width: 6em;
+        margin: .5em auto;
+        color: white;
+    }
+    body.verhaal section article header > div:last-of-type {
+        display: flex;
+        justify-content: space-between;
+        width: 35em;
+        margin-left: 3em;
+        position: absolute;
+        z-index: 1;
+    }
+    body.verhaal section article header > div div:first-of-type p {
+        margin: 0;
+        padding: 0;
+        color: white;
+        width: 15em;
+    }
+    body.verhaal section article header > div div:first-of-type p span {
+        margin: .1em;
+        padding: 0;
+        color: white;
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.1em;
+        animation-name: voorbeeldOne;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    body.verhaal section article header > div div:last-of-type p {
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    body.verhaal section article header > div div:last-of-type p span {
+        margin: .1em;
+        padding: 0;
+        color: white;
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.1em;
+        animation-name: voorbeeldOne;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+    }
+
+    /**shape maken voor de letter k met een tekst**/
+    body.verhaal section article header > div div:last-of-type p:first-of-type {
+        margin-left: 6.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(2) {
+        margin-left: 6em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(3) {
+        margin-left: 5.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(4) {
+        margin-left: 5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(5) {
+        margin-left: 4.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(6) {
+        margin-left: 4em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(7) {
+        margin-left: 3.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(8) {
+        margin-left: 3em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(9) {
+        margin-left: 2.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(10) {
+        margin-left: 2em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(11) {
+        margin-left: 1.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(12) {
+        margin-left: 1em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(13) {
+        margin-left: .5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(14) {
+        margin-left: 0em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(15) {
+        margin-left: .5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(16) {
+        margin-left: 1em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(17) {
+        margin-left: 1.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(18) {
+        margin-left: 2em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(19) {
+        margin-left: 2.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(20) {
+        margin-left: 3em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(21) {
+        margin-left: 3.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(22) {
+        margin-left: 4em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(23) {
+        margin-left: 4.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(24) {
+        margin-left: 5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(25) {
+        margin-left: 5.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(26) {
+        margin-left: 6em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(27) {
+        margin-left: 6.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(28) {
+        margin-left: 7em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(29) {
+        margin-left: 7.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(30) {
+        margin-left: 8em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(31) {
+        margin-left: 8.5em;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(32) {
+        margin-left: 9em;
+    }
+
+    /** annimation voor de spans van kolom twee **/
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(7) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(8) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 2s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(13) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 3.5s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(14) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 2.5s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(15) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.5s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(20) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.7s;
+    }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(26) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.9s;
+    }
+
+
+    /** eerste kolom span annimation **/
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(4) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.9s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(9) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 2.5s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(15) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 3.5s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(21) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(23) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 1.6s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(24) span:first-of-type {
+        animation-name: voorbeeldOne;
+        animation-duration: 3s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(24) span:last-of-type {
+        animation-name: voorbeeldOne;
+        animation-duration: 2s;
+    }
+    body.verhaal section article header > div div:first-of-type p:nth-of-type(27) span {
+        animation-name: voorbeeldOne;
+        animation-duration: 5s;
+    }
+    body.verhaal section article header > div:first-of-type {
+        position: absolute;
+        left: 31em;
+        right: 0;
+        top: 10em;
+        bottom: 0;
+        margin: auto;
+        background-image: url(../Images/lootzak.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.7;
     }
 
 }
