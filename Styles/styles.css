@@ -144,6 +144,7 @@ body main section:first-of-type img {
     width: 11.5rem;
     background-size: 6.5rem;
     border: 0;
+    oUtline: 0;
     background-color: transparent;
 }
 
