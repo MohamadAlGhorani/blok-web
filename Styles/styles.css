@@ -2,11 +2,17 @@
     font-family: 'aggressive';
     src: url('../Fonts/aggressive/Aggressive.ttf')
 }
+
 @keyframes move {
-    100% { transform: scale(1.3);}
+    100% {
+        transform: scale(1.3);
+    }
 }
+
 @keyframes movetwee {
-    100% { background-size: 4em ;}
+    100% {
+        background-size: 4em;
+    }
 }
 
 
@@ -38,6 +44,32 @@
     100% {
         color: #982682;
     }
+}
+
+header nav ul li:last-of-type span {
+    position: absolute;
+    top: .6em;
+    right: .6em;
+    color: black;
+    width: 1.3em;
+    text-align: center;
+    border-radius: 100%;
+    font-weight: 700;
+    background-color: #fcdd67;
+    visibility: hidden;
+}
+
+header nav ul li:last-of-type span.verschijn {
+    position: absolute;
+    top: .6em;
+    right: .6em;
+    color: black;
+    width: 1.3em;
+    text-align: center;
+    border-radius: 100%;
+    font-weight: 700;
+    background-color: #fcdd67;
+    visibility: visible;
 }
 
 header nav ul li:nth-of-type(2) a img {
@@ -478,7 +510,6 @@ article a > img {
     object-fit: cover;
     object-position: center center;
     height: 14em;
-
 }
 
 article li:first-of-type button {
@@ -511,10 +542,10 @@ article li:first-of-type button:hover {
 }
 
 article li:last-of-type button {
-    width: 3em;
+    width: 5em;
     background-image: url(../Images/downloadicon.svg);
     background-color: transparent;
-    background-position: top;
+    background-position: 1.5em .2em;
     background-size: 3em;
     border: 0;
     background-repeat: no-repeat;
@@ -522,6 +553,24 @@ article li:last-of-type button {
     padding-right: 5em;
     font-size: 0.75em;
     color: #2b4040;
+    text-align: center;
+    margin-right: 1em;
+}
+
+article li:last-of-type button.ani {
+    width: 4em;
+    background-image: url(../Images/downloadDone.svg);
+    background-color: transparent;
+    background-position: 1.5em .2em;
+    background-size: 3em;
+    border: 0;
+    background-repeat: no-repeat;
+    padding-top: 3em;
+    padding-right: 5em;
+    font-size: 0.75em;
+    color: #2b4040;
+    text-align: center;
+    margin-right: 1em;
 }
 
 article li:last-of-type button:focus {
@@ -553,6 +602,7 @@ section article {
     margin-right: .5em;
     scroll-snap-align: center;
     height: 25rem;
+    position: relative;
 }
 
 section article ul {
@@ -560,6 +610,74 @@ section article ul {
     justify-content: space-between;
     margin-top: auto;
     padding: .5rem;
+}
+
+
+section article header p:first-of-type {
+    position: absolute;
+    bottom: 3em;
+    background-color: #FEDF5C;
+    margin-bottom: .3em;
+    color: #2b4040;
+    text-align: center;
+    padding: 1em;
+    left: auto;
+    right: auto;
+    margin: 1em;
+    opacity: 0;
+    transition: all 2s fade-in-out 2s;
+}
+
+section article header p:first-of-type.ani {
+    position: absolute;
+    bottom: 3em;
+    background-color: #FEDF5C;
+    margin-bottom: .3em;
+    color: #2b4040;
+    text-align: center;
+    padding: 1em;
+    left: auto;
+    right: auto;
+    margin: 1em;
+    opacity: 1;
+}
+
+article > p:last-of-type {
+    position: absolute;
+    bottom: 4em;
+    left: auto;
+    right: auto;
+    margin: 1em;
+    background-color: #FEDF5C;
+    padding: 1em;
+    text-align: center;
+    opacity: 0;
+    height: 3.1em;
+}
+
+article > p:last-of-type.ani {
+    position: absolute;
+    bottom: 4em;
+    left: auto;
+    right: auto;
+    margin: 1em;
+    background-color: #FEDF5C;
+    padding: 1em;
+    text-align: center;
+    opacity: 1;
+    height: 3.1em;
+}
+
+section article header > p:last-of-type {
+    position: absolute;
+    bottom: 0.05em;
+    left: 0;
+    background-color: #982682;
+    margin-bottom: .2em;
+    color: white;
+    padding: .2em;
+    font-size: .80em;
+    opacity: 1;
 }
 
 article ul > li:first-of-type {
@@ -1060,7 +1178,7 @@ body.verhaal section article header h1 {
         width: 22.5em;
         margin-left: -24rem;
         transition: all 0.5s cubic-bezier(.38, 1.34, .72, -0.18);
-        z-index: 1;
+        z-index: 3;
         border: 1px solid #88AFAF;
         border-left: 0;
     }
@@ -1073,7 +1191,7 @@ body.verhaal section article header h1 {
         left: 0rem;
         width: 22.5em;
         margin-left: 0rem;
-        z-index: 2 !important;
+        z-index: 3 !important;
         border: 1px solid #88AFAF;
         border-left: 0;
     }
@@ -1382,6 +1500,87 @@ body.verhaal section article header h1 {
         background-size: 30em;
         opacity: 0.7;
     }
+    header nav ul li:last-of-type span {
+        position: absolute;
+        top: .6em;
+        right: 2em;
+        color: black;
+        width: 1.3em;
+        text-align: center;
+        border-radius: 100%;
+        font-weight: 700;
+        background-color: #fcdd67;
+        display: none;
+    }
+    header nav ul li:last-of-type span.verschijn {
+        position: absolute;
+        top: .6em;
+        right: 2em;
+        color: black;
+        width: 1.3em;
+        text-align: center;
+        border-radius: 100%;
+        font-weight: 700;
+        background-color: #fcdd67;
+        display: block;
+    }
+
+    body.verhaal section article header > p:first-of-type {
+        position: absolute;
+        width: 20em;
+        bottom: 40em;
+        background-color: #fcdd67;
+        margin-bottom: .3em;
+        color: #2b4040;
+        text-align: center;
+        padding: 2em;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        opacity: 0;
+        z-index: 2;
+        transition: all 2s fade-in-out 2s;
+    }
+
+    body.verhaal section article header > p:first-of-type.ani {
+        position: absolute;
+        bottom: 40em;
+        background-color: #fcdd67;
+        margin-bottom: .3em;
+        color: #2b4040;
+        text-align: center;
+        padding: 2em;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        opacity: 1;
+        z-index: 2;
+    }
+    body.verhaal article > p:last-of-type {
+        position: absolute;
+        bottom: 3.5em;
+        left: auto;
+        right: 0;
+        margin: 1em;
+        background-color: #FEDF5C;
+        padding: 0.4em;
+        text-align: center;
+        opacity: 0;
+        height: 2em;
+    }
+
+    body.verhaal article > p:last-of-type.ani {
+        position: absolute;
+        bottom: 3.5em;
+        left: auto;
+        right: 0;
+        margin: 1em;
+        background-color: #FEDF5C;
+        padding: 0.4em;
+        text-align: center;
+        opacity: 1;
+        height: 2em;
+    }
 }
 
 @media (min-width:50em) {
@@ -1405,7 +1604,7 @@ body.verhaal section article header h1 {
         width: 23em;
         margin-left: -24rem;
         transition: all 0.5s cubic-bezier(.38, 1.34, .72, -0.18);
-        z-index: 1;
+        z-index: 3;
         border: 1px solid #88AFAF;
         border-left: 0;
     }
@@ -1418,7 +1617,7 @@ body.verhaal section article header h1 {
         left: 0rem;
         width: 23em;
         margin-left: 0.5rem;
-        z-index: 2 !important;
+        z-index: 3 !important;
         border: 1px solid #88AFAF;
         border-left: 0;
     }
@@ -1733,6 +1932,85 @@ body.verhaal section article header h1 {
         background-position: center;
         background-size: contain;
         opacity: 0.7;
+    }
+    header nav ul li:last-of-type span {
+        position: absolute;
+        top: 3em;
+        right: 4.5em;
+        color: black;
+        width: 1.3em;
+        text-align: center;
+        border-radius: 100%;
+        font-weight: 700;
+        background-color: #fcdd67;
+        visibility: hidden;
+    }
+    header nav ul li:last-of-type span.verschijn {
+        position: absolute;
+        top: 3em;
+        right: 4.5em;
+        color: black;
+        width: 1.3em;
+        text-align: center;
+        border-radius: 100%;
+        font-weight: 700;
+        background-color: #fcdd67;
+        visibility: visible;
+    }
+    body.verhaal section article header p:first-of-type {
+        position: absolute;
+        width: 20em;
+        bottom: 40em;
+        background-color: #fcdd67;
+        margin-bottom: .3em;
+        color: #2b4040;
+        text-align: center;
+        padding: 2em;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        opacity: 0;
+        transition: all 2s fade-in-out 2s;
+    }
+
+    body.verhaal section article header p:first-of-type.ani {
+        position: absolute;
+        bottom: 40em;
+        background-color: #fcdd67;
+        margin-bottom: .3em;
+        color: #2b4040;
+        text-align: center;
+        padding: 2em;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        opacity: 1;
+        z-index: 3;
+    }
+    body.verhaal article > p:last-of-type {
+        position: absolute;
+        bottom: 3.5em;
+        left: auto;
+        right: 0;
+        margin: 1em;
+        background-color: #FEDF5C;
+        padding: 0.4em;
+        text-align: center;
+        opacity: 0;
+        height: 2em;
+    }
+
+    body.verhaal article > p:last-of-type.ani {
+        position: absolute;
+        bottom: 3.5em;
+        left: auto;
+        right: 0;
+        margin: 1em;
+        background-color: #FEDF5C;
+        padding: 0.4em;
+        text-align: center;
+        opacity: 1;
+        height: 2em;
     }
 
 }
