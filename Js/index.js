@@ -9,10 +9,8 @@ var profileNumber = document.querySelector('header nav ul li:last-of-type span')
 var profileGetal = parseInt(profileNumber.innerText);
 var favorit = document.querySelectorAll('section article header button');
 var verrasMe = document.querySelector('header form:last-of-type input:nth-of-type(4)');
-var likeElement = document.querySelector('body section article ul span li:last-of-type');
-var likeGetal = parseInt(likeElement.innerText);
-var status = 'een';
 var download = document.querySelectorAll('section article ul li:last-of-type button');
+var downloadArray = Array.from(download);
 
 var slider = document.querySelector("header input[type=range]");
 var output = document.querySelector("header form:nth-of-type(2) fieldset:nth-of-type(2) p span");
@@ -55,18 +53,17 @@ filter.addEventListener('click', terug);
 
 for (var i = 0; i < like.length; i++) {
     like[i].addEventListener("click", function () {
-        likeLabel = this.parentNode.nextElementSibling;
+        var likeLabel = this.parentNode.nextElementSibling;
+        var likeGetaltje = parseInt(likeLabel.innerText);
         this.classList.toggle('ani');
         console.dir(this.parentNode.nextElementSibling);
-        if (status == 'een') {
-
-            likeGetal = likeGetal + 1;
-
-            likeLabel.textContent = likeGetal;
+        if (this.classList.contains('ani')) {
+            likeGetaltje = likeGetaltje + 1;
+            likeLabel.textContent = likeGetaltje;
             status = 'twee';
-        } else if (status == 'twee') {
-            likeGetal = likeGetal - 1;
-            likeLabel.textContent = likeGetal;
+        } else {
+            likeGetaltje = likeGetaltje - 1;
+            likeLabel.textContent = likeGetaltje;
             status = 'een';
         }
     });
@@ -76,12 +73,16 @@ for (var i = 0; i < like.length; i++) {
 for (var i = 0; i < favorit.length; i++) {
     favorit[i].addEventListener("click", function () {
         this.classList.toggle('ani');
-        var melding = this.nextElementSibling.lastChild;
+        var melding = this.nextElementSibling.lastElementChild;
 
         if (this.classList.contains('ani')) {
             profileGetal = profileGetal + 1;
             profileNumber.textContent = profileGetal;
+            console.dir(this);
             melding.classList.add('ani');
+            setTimeout(function () {
+                melding.classList.remove('ani');
+            }, 4500);
         } else {
             profileGetal = profileGetal - 1;
             profileNumber.textContent = profileGetal;
@@ -90,7 +91,7 @@ for (var i = 0; i < favorit.length; i++) {
 
 
         if (profileGetal > 0) {
-            profileNumber.classList.add('verschijn')
+            profileNumber.classList.add('verschijn');
         } else if (profileGetal <= 0) {
             profileNumber.classList.remove('verschijn');
         }
@@ -99,31 +100,51 @@ for (var i = 0; i < favorit.length; i++) {
     });
 } //end for
 
-for (var i = 0; i < download.length; i++) {
-    download[i].addEventListener("click", function () {
-        this.classList.toggle('ani');
-        var melding = this.parentNode.parentNode.nextElementSibling;
+downloadArray.forEach((item) => {
+    item.addEventListener('click', () => {
+        console.log(item.classList);
+        if (item.classList.value == "") {
+            item.classList.add('gif');
+            item.innerHTML = 'Downloaden';
+            setTimeout(function () {
+                item.classList.remove('gif');
+                item.classList.toggle('ani');
+                var melding = item.parentNode.parentNode.nextElementSibling;
 
-        if (this.classList.contains('ani')) {
-            profileGetal = profileGetal + 1;
-            profileNumber.textContent = profileGetal;
-            this.innerHTML = 'Gedownload';
-            melding.classList.add('ani');
+                if (item.classList.contains('ani')) {
+                    profileGetal = profileGetal + 1;
+                    profileNumber.textContent = profileGetal;
+                    item.innerHTML = 'Gedownload';
+                    melding.classList.add('ani');
+                    setTimeout(function () {
+                        melding.classList.remove('ani');
+                    }, 3000);
 
-        } else {
+                } else {
+                    profileGetal = profileGetal - 1;
+                    profileNumber.textContent = profileGetal;
+                    item.innerHTML = 'Download';
+                }
+
+
+
+//                if (profileGetal > 0) {
+//                    profileNumber.classList.add('verschijn')
+//                } else if (profileGetal <= 0) {
+//                    profileNumber.classList.remove('verschijn');
+//                }
+            }, 2100);
+        } else if (item.classList.value == 'ani') {
+            item.classList.remove('ani');
+            item.classList.remove('gif');
+            item.innerHTML = 'Download';
             profileGetal = profileGetal - 1;
             profileNumber.textContent = profileGetal;
-            this.innerHTML = 'Download';
+            if (profileGetal > 0) {
+                profileNumber.classList.add('verschijn')
+            } else if (profileGetal <= 0) {
+                profileNumber.classList.remove('verschijn');
+            }
         }
-
-
-
-        if (profileGetal > 0) {
-            profileNumber.classList.add('verschijn')
-        } else if (profileGetal <= 0) {
-            profileNumber.classList.remove('verschijn');
-        }
-
-
     });
-} //end for
+});

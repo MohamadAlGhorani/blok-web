@@ -9,6 +9,14 @@
     }
 }
 
+
+@keyframes title {
+    100% {
+        transform: scale(1.3);
+        color: red
+    }
+}
+
 @keyframes movetwee {
     100% {
         background-size: 4em;
@@ -56,7 +64,95 @@ header nav ul li:last-of-type span {
     border-radius: 100%;
     font-weight: 700;
     background-color: #fcdd67;
-    visibility: hidden;
+    display: none;
+}
+
+body.instructie {
+    border: 0;
+}
+
+body.instructie section {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 51em;
+    margin: 0;
+    position: relative;
+}
+
+body.instructie section p:first-of-type {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    transition: all 1s;
+    color: #982682;
+    padding-top: 2em;
+    padding-left: 1em;
+    margin-top: 6em;
+    margin-bottom: 6em;
+    background-color: #fcdd67
+
+}
+
+body.instructie section p:last-of-type {
+    background-image: url(../Images/instructieEen.png);
+    background-repeat: no-repeat;
+    background-size: 20em;
+    background-position: center;
+    transition: all 1s;
+    position: absolute;
+    left: 1em;
+    right: 1em;
+    margin: 0 auto;
+    bottom: 0;
+    top: 14em;
+}
+
+body.instructie section h2 {
+    display: none;
+}
+
+body.instructie section p:last-of-type.first {
+    background-image: url(../Images/instructieTwee.gif);
+    transition: all 1s;
+}
+
+body.instructie section p:last-of-type.second {
+    background-image: url(../Images/instructieDrie.png);
+    transition: all 1s;
+}
+
+body.instructie section img {
+    position: absolute;
+    left: 1em;
+    right: 1em;
+    margin: 0 auto;
+    margin-top: 1em
+}
+
+body.instructie section button {
+    position: absolute;
+    bottom: 5em;
+    width: 9em;
+    height: 2.5em;
+    left: 1em;
+    right: 1em;
+    margin: 0 auto;
+    -webkit-appearance: none;
+    border: 1px solid #982682;
+    border-radius: 0.25em;
+    height: 2rem;
+    line-height: 2.5em;
+    background-color: #982682;
+    color: white;
+    font-size: 0.75em;
+    font-weight: 700;
+}
+
+body.instructie section button:hover {
+    background-color: #701b67;
+    border-color: #53144d;
 }
 
 header nav ul li:last-of-type span.verschijn {
@@ -69,7 +165,7 @@ header nav ul li:last-of-type span.verschijn {
     border-radius: 100%;
     font-weight: 700;
     background-color: #fcdd67;
-    visibility: visible;
+    display: block;
 }
 
 header nav ul li:nth-of-type(2) a img {
@@ -157,6 +253,22 @@ body > h1 {
     font-weight: 700;
     font-size: 1.5em;
     margin-bottom: 0;
+}
+
+body.account > h1 {
+    animation-name: voorbeeldTwee;
+    animation-duration: 2s;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 0 auto;
+}
+
+body.accountDone > h1 {
+    animation: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-top: 3em;
 }
 
 header {
@@ -393,6 +505,7 @@ header form p:first-of-type input[type=search] {
     line-height: 3em;
     width: 100%;
     padding-left: 1em;
+    padding-right: 1em;
 }
 
 header form p:first-of-type input[type=search]:focus {
@@ -499,6 +612,10 @@ footer {
     text-align: center;
 }
 
+body.account footer {
+    margin-top: 7.1em;
+}
+
 footer img {
     width: 18.75em;
     margin: 0px auto;
@@ -508,7 +625,7 @@ footer img {
 article a > img {
     width: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center;
     height: 14em;
 }
 
@@ -573,6 +690,22 @@ article li:last-of-type button.ani {
     margin-right: 1em;
 }
 
+article li:last-of-type button.gif {
+    width: 4em;
+    background-image: url(../Images/Percentage%20loaded.gif);
+    background-color: transparent;
+    background-position: 1.3em 1.1em;
+    background-size: 3em;
+    border: 0;
+    background-repeat: no-repeat;
+    padding-top: 3em;
+    padding-right: 5em;
+    font-size: 0.75em;
+    color: #2b4040;
+    text-align: center;
+    margin-right: 1em;
+}
+
 article li:last-of-type button:focus {
     color: #982682;
 }
@@ -625,7 +758,7 @@ section article header p:first-of-type {
     right: auto;
     margin: 1em;
     opacity: 0;
-    transition: all 2s fade-in-out 2s;
+    transition: opacity 1s;
 }
 
 section article header p:first-of-type.ani {
@@ -633,7 +766,7 @@ section article header p:first-of-type.ani {
     bottom: 3em;
     background-color: #FEDF5C;
     margin-bottom: .3em;
-    color: #2b4040;
+    color: #2b4040 !important;
     text-align: center;
     padding: 1em;
     left: auto;
@@ -653,6 +786,7 @@ article > p:last-of-type {
     text-align: center;
     opacity: 0;
     height: 3.1em;
+    transition: opacity 1s;
 }
 
 article > p:last-of-type.ani {
@@ -670,14 +804,16 @@ article > p:last-of-type.ani {
 
 section article header > p:last-of-type {
     position: absolute;
-    bottom: 0.05em;
+    bottom: 0em;
     left: 0;
     background-color: #982682;
-    margin-bottom: .2em;
+    margin-bottom: 0em;
     color: white;
     padding: .2em;
     font-size: .80em;
     opacity: 1;
+    animation: none;
+    margin-left: 1rem;
 }
 
 article ul > li:first-of-type {
@@ -839,9 +975,12 @@ article header {
     padding: 0;
     margin: 0;
     position: relative;
+    border-bottom: 1px solid #88AFAF;
+    height: 14em;
 }
 
-article header button {
+
+article header > button {
     -webkit-appearance: none;
     position: absolute;
     top: 0;
@@ -857,7 +996,7 @@ article header button {
     border: 0;
 }
 
-article header button.ani {
+article header > button.ani {
     -webkit-appearance: none;
     position: absolute;
     top: 0;
@@ -873,6 +1012,45 @@ article header button.ani {
     border: 0;
     animation-name: movetwee;
     animation-duration: .5s;
+}
+
+article > header > p > a:last-of-type {
+    -webkit-appearance: none;
+    background-color: #982682;
+    border-radius: .25em;
+    color: white;
+    width: 8rem;
+    border: 1px solid #982682;
+    font-size: .75em;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-top: .5em;
+    display: block;
+
+}
+
+article > header > p > a:last-of-type:hover {
+    background-color: #701b67;
+    border-color: #53144d;
+}
+
+article > p > a {
+    -webkit-appearance: none;
+    background-color: #982682;
+    border-radius: .25em;
+    color: white;
+    width: 8rem;
+    border: 1px solid #982682;
+    font-size: .75em;
+    margin: 0 auto;
+    font-weight: 700;
+    margin-top: .5em;
+    display: block;
+}
+
+article > p > a:hover {
+    background-color: #701b67;
+    border-color: #53144d;
 }
 
 input[type=range] {
@@ -1098,6 +1276,31 @@ body > form {
     width: 91.50%;
 }
 
+body.account > form {
+    margin: 0 auto;
+    width: 21.6em;
+}
+
+body.accountDone > form {
+    margin: 0 auto;
+    width: 21.6em;
+    opacity: 0;
+}
+
+body.accountDone > img {
+    position: absolute;
+    width: 10em;
+    left: 1em;
+    right: 1em;
+    margin: 0 auto;
+    top: 16em;
+}
+
+body.accountDone > footer {
+    margin-top: 1.1em;
+}
+
+
 body > form fieldset {
     margin: 0;
     padding: 0;
@@ -1146,7 +1349,7 @@ body.verhaal section article {
 body.verhaal section article header {
     width: 100%;
     max-width: 100%;
-    height: 60em;
+    height: 75em;
     margin: 0;
     background-image: url(../Images/verhaal.jpg);
     background-repeat: no-repeat;
@@ -1160,13 +1363,129 @@ body.verhaal section article h4 {
 
 body.verhaal section article header h1 {
     font-family: 'aggressive';
-    font-size: 3em;
+    font-size: 2.7em;
     font-weight: 100;
     width: 6em;
-    margin: 1em auto;
+    margin: .8em auto;
     color: white;
+    margin-bottom: .5em;
+
 }
 
+body.verhaal section article header h1:hover {
+    animation-name: title;
+    animation-duration: .5s;
+}
+
+body.verhaal section article header > div div p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    margin-left: 9em;
+    font-size: .8em;
+}
+
+body.verhaal section article header > div div p span {
+    margin: .1em;
+    padding: 0;
+    color: white;
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+    animation-name: voorbeeldOne;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+/** annimation voor de spans van kolom twee **/
+
+body.verhaal section article header > div div:last-of-type p:nth-of-type(7) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 1s;
+}
+
+body.verhaal section article header > div div:last-of-type p:nth-of-type(8) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 2s;
+}
+
+body.verhaal section article header > div div:last-of-type p:nth-of-type(13) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 3.5s;
+}
+
+body.verhaal section article header > div div:last-of-type p:nth-of-type(14) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 2.5s;
+}
+
+body.verhaal section article header > div div:last-of-type p:nth-of-type(15) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 1.5s;
+}
+
+body.verhaal section article header > div div:last-of-type p:nth-of-type(20) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 1.7s;
+}
+
+body.verhaal section article header > div div:last-of-type p:nth-of-type(26) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 1.9s;
+}
+
+
+/** eerste kolom span annimation **/
+
+body.verhaal section article header > div div:first-of-type p:nth-of-type(4) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 1.9s;
+}
+
+body.verhaal section article header > div div:first-of-type p:nth-of-type(9) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 2.5s;
+}
+
+body.verhaal section article header > div div:first-of-type p:nth-of-type(15) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 3.5s;
+}
+
+body.verhaal section article header > div div:first-of-type p:nth-of-type(21) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 1s;
+}
+
+body.verhaal section article header > div div:first-of-type p:nth-of-type(23) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 1.6s;
+}
+
+body.verhaal section article header > div div:first-of-type p:nth-of-type(24) span:first-of-type {
+    animation-name: voorbeeldOne;
+    animation-duration: 3s;
+}
+
+body.verhaal section article header > div div:first-of-type p:nth-of-type(24) span:last-of-type {
+    animation-name: voorbeeldOne;
+    animation-duration: 2s;
+}
+
+body.verhaal section article header > div div:first-of-type p:nth-of-type(27) span {
+    animation-name: voorbeeldOne;
+    animation-duration: 5s;
+}
+
+body.verhaal section article header > div {
+    background-image: url(../Images/klootzak.svg);
+    background-repeat: no-repeat;
+    background-position: -2em;
+    background-size: 11em;
+    opacity: 0.7;
+    margin: 0 auto;
+}
 
 @media (min-width:36.25em) {
     header form:nth-of-type(2) {
@@ -1264,7 +1583,6 @@ body.verhaal section article header h1 {
         height: 60em;
         margin: 0;
         background-image: url(../Images/verhaal.jpg);
-        background-repeat: no-repeat;
         background-size: 100%;
     }
 
@@ -1279,10 +1597,14 @@ body.verhaal section article header h1 {
         margin: .5em auto;
         color: white;
     }
+    body.verhaal section article header h1:hover {
+        animation-name: title;
+        animation-duration: .5s;
+    }
     body.verhaal section article header > div:last-of-type {
         display: flex;
         justify-content: space-between;
-        width: 35em;
+        width: 28em;
         position: absolute;
         left: 1em;
         right: 1em;
@@ -1423,6 +1745,9 @@ body.verhaal section article header h1 {
     body.verhaal section article header > div div:last-of-type p:nth-of-type(32) {
         margin-left: 9em;
     }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(33) {
+        margin-left: 9.5em;
+    }
 
     /** annimation voor de spans van kolom twee **/
     body.verhaal section article header > div div:last-of-type p:nth-of-type(7) span {
@@ -1500,6 +1825,9 @@ body.verhaal section article header h1 {
         background-size: 30em;
         opacity: 0.7;
     }
+    body.verhaal section article header > div {
+        background-image: none;
+    }
     header nav ul li:last-of-type span {
         position: absolute;
         top: .6em;
@@ -1525,7 +1853,7 @@ body.verhaal section article header h1 {
         display: block;
     }
 
-    body.verhaal section article header > p:first-of-type {
+    body.verhaal section article header a:first-of-type p {
         position: absolute;
         width: 20em;
         bottom: 40em;
@@ -1539,10 +1867,9 @@ body.verhaal section article header h1 {
         margin: 0 auto;
         opacity: 0;
         z-index: 2;
-        transition: all 2s fade-in-out 2s;
     }
 
-    body.verhaal section article header > p:first-of-type.ani {
+    body.verhaal section article header a:first-of-type p.ani {
         position: absolute;
         bottom: 40em;
         background-color: #fcdd67;
@@ -1567,6 +1894,9 @@ body.verhaal section article header h1 {
         text-align: center;
         opacity: 0;
         height: 2em;
+        animation-name: fadeOut;
+        animation-duration: 1s;
+
     }
 
     body.verhaal article > p:last-of-type.ani {
@@ -1580,6 +1910,101 @@ body.verhaal section article header h1 {
         text-align: center;
         opacity: 1;
         height: 2em;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+    }
+    body.verhaal article header > p:last-of-type {
+        left: 1rem;
+        bottom: 0em;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    body.instructie section {
+        background-color: #fcdd67;
+        display: flex;
+        justify-content: space-between;
+        height: 64em;
+        margin: 0;
+        position: relative;
+    }
+
+    body.instructie section p:first-of-type {
+        width: 50%;
+        font-size: 2em;
+        margin: .5em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 2em;
+        padding-top: 1em;
+        font-weight: 700;
+        padding-right: 0em;
+        line-height: 1.5em;
+        transition: all 1s;
+        color: #982682;
+        background-color: white;
+        margin-top: 7em;
+        margin-bottom: 9em
+    }
+
+    body.instructie section p:last-of-type {
+        width: 50%;
+        background-image: url(../Images/instructieEen.png);
+        background-repeat: no-repeat;
+        background-size: 25em;
+        background-position: center;
+        transition: all 1s;
+        padding-right: 15em;
+        background-position: 2.3em -3em;
+        background-color: white;
+        margin-top: 14em;
+        margin-bottom: 18em;
+        position: static;
+    }
+
+    body.instructie section h2 {
+        display: none;
+    }
+    body.instructie section p:last-of-type.first {
+        background-image: url(../Images/instructieTwee.gif);
+        transition: all 1s;
+    }
+
+    body.instructie section p:last-of-type.second {
+        background-image: url(../Images/instructieDrie.png);
+        transition: all 1s;
+    }
+
+    body.instructie section img {
+        position: absolute;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        margin-top: 2em
+    }
+
+    body.instructie section button {
+        position: absolute;
+        bottom: 15em;
+        width: 9em;
+        height: 2.5em;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        -webkit-appearance: none;
+        border: 1px solid #982682;
+        border-radius: 0.25em;
+        height: 2rem;
+        line-height: 2.5em;
+        background-color: #982682;
+        color: white;
+        font-size: 0.75em;
+        font-weight: 700;
+    }
+
+    body.instructie section button:hover {
+        background-color: #701b67;
+        border-color: #53144d;
     }
 }
 
@@ -1593,7 +2018,7 @@ body.verhaal section article header h1 {
     }
     header > nav ul {
         margin-bottom: 2em;
-        height: 5.5em
+        height: 5.5em;
     }
     header form:nth-of-type(2) {
         position: absolute;
@@ -1713,10 +2138,14 @@ body.verhaal section article header h1 {
         margin: .5em auto;
         color: white;
     }
+    body.verhaal section article header h1:hover {
+        animation-name: title;
+        animation-duration: .5s;
+    }
     body.verhaal section article header > div:last-of-type {
         display: flex;
         justify-content: space-between;
-        width: 35em;
+        width: 28em;
         margin-left: 3em;
         position: absolute;
         z-index: 1;
@@ -1855,6 +2284,9 @@ body.verhaal section article header h1 {
     body.verhaal section article header > div div:last-of-type p:nth-of-type(32) {
         margin-left: 9em;
     }
+    body.verhaal section article header > div div:last-of-type p:nth-of-type(33) {
+        margin-left: 9.5em;
+    }
 
     /** annimation voor de spans van kolom twee **/
     body.verhaal section article header > div div:last-of-type p:nth-of-type(7) span {
@@ -1957,7 +2389,7 @@ body.verhaal section article header h1 {
         background-color: #fcdd67;
         visibility: visible;
     }
-    body.verhaal section article header p:first-of-type {
+    body.verhaal section article header a:first-of-type p {
         position: absolute;
         width: 20em;
         bottom: 40em;
@@ -1970,10 +2402,9 @@ body.verhaal section article header h1 {
         right: 1em;
         margin: 0 auto;
         opacity: 0;
-        transition: all 2s fade-in-out 2s;
     }
 
-    body.verhaal section article header p:first-of-type.ani {
+    body.verhaal section article header a:first-of-type p.ani {
         position: absolute;
         bottom: 40em;
         background-color: #fcdd67;
@@ -2011,6 +2442,103 @@ body.verhaal section article header h1 {
         text-align: center;
         opacity: 1;
         height: 2em;
+    }
+    body.verhaal article header > p:last-of-type {
+        left: 1rem;
+        bottom: 0em;
+        margin-bottom: 0;
+    }
+
+}
+
+@media(min-width: 62em ) {
+      body.instructie section {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        height: 41em;
+        margin: 0;
+        position: relative;
+    }
+
+    body.instructie section p:first-of-type {
+        width: 50%;
+        font-size: 2em;
+        margin: .5em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 4em;
+        padding-top: 2em;
+        font-weight: 700;
+        padding-right: 2em;
+        line-height: 1.5em;
+        transition: all 1s;
+        color: #982682;
+        background-color: transparent;
+        margin: 0;
+        background-color: #fcdd67;
+        margin-top: 5em;
+        margin-bottom: 3.5em;
+    }
+
+    body.instructie section p:last-of-type {
+        width: 50%;
+        background-image: url(../Images/instructieEen.png);
+        background-repeat: no-repeat;
+        background-size: 25em;
+        background-position: center;
+        transition: all 1s;
+        padding-right: 10em;
+        background-color: transparent;
+        margin: 0;
+        background-color: #fcdd67;
+        margin-top: 10em;
+        margin-bottom: 7em;
+    }
+
+    body.instructie section h2 {
+        display: none;
+    }
+    body.instructie section p:last-of-type.first {
+        background-image: url(../Images/instructieTwee.gif);
+        transition: all 1s;
+    }
+
+    body.instructie section p:last-of-type.second {
+        background-image: url(../Images/instructieDrie.png);
+        transition: all 1s;
+    }
+
+    body.instructie section img {
+        position: absolute;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        margin-top: 2em
+    }
+
+    body.instructie section button {
+        position: absolute;
+        bottom: 5em;
+        width: 9em;
+        height: 2.5em;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        -webkit-appearance: none;
+        border: 1px solid #982682;
+        border-radius: 0.25em;
+        height: 2rem;
+        line-height: 2.5em;
+        background-color: #982682;
+        color: white;
+        font-size: 0.75em;
+        font-weight: 700;
+    }
+
+    body.instructie section button:hover {
+        background-color: #701b67;
+        border-color: #53144d;
     }
 
 }

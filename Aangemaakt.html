@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WOW air | verhalen website</title>
+    <link rel="shortcut icon" href="images/sitelogo.png" type="image/png" />
+    <link rel="stylesheet" href="Styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/kks3qsr.css">
+</head>
+
+<body class="accountDone">
+    <header>
+        <nav>
+            <ul>
+                <li><button>Filteren</button></li>
+                <li><a href="index.html"><img src="Images/sitelogo.svg" alt=""></a></li>
+                <li>
+                    <button>
+                </button>
+                    <a href=""><span>0</span></a>
+                </li>
+            </ul>
+        </nav>
+        <form action="">
+            <p>
+                <label for="zoekbalk">zoek</label>
+                <input type="search" placeholder="zoeken.." name="zoek" id="zoekbalk">
+            </p>
+            <p>
+                <input type="submit" name="zoek" value="ZOEK">
+            </p>
+        </form>
+        <form action="">
+            <legend>Aantal likes</legend>
+            <fieldset>
+                <p><input type="checkbox" id="nul">
+                    <span></span>
+                    <label for="nul">0 tot 20</label></p>
+                <p><input type="checkbox" id="twinteg">
+                    <span></span>
+                    <label for="twentig">21 tot 40</label></p>
+                <p><input type="checkbox" id="viertig">
+                    <span></span>
+                    <label for="viertig">41 tot 60</label></p>
+                <p><input type="checkbox" id="zestig">
+                    <span></span>
+                    <label for="zestig">61 en meer</label></p>
+            </fieldset>
+            <legend>Leesduur</legend>
+            <fieldset>
+                <input type="range" min='1' max='30' value="15">
+                <p><span></span> minuten</p>
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="Toepassen" name="Toepassen">
+            </fieldset>
+        </form>
+
+        <form action="">
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="genre">
+            <label for="genre">Genre</label>
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="leesduur">
+            <label for="leesduur">Leesduur</label>
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="populariteit">
+            <label for="populariteit">Populariteit</label>
+            <input class="sorteerOptie" type="radio" name="sorteerOptie" id="verrasme">
+            <label for="verrasme">Verras me</label>
+            <input type="submit" name="sorteerOptie" value="verstuur">
+        </form>
+    </header>
+    <h1>Uw account is aangemaakt</h1>
+
+    <form action="">
+        <legend><img src="Images/profileicon.svg" alt="">Mijn gegevens</legend>
+        <fieldset>
+            <p>
+                <label for="naam">Gbruikersnaam</label>
+                <input type="text" id="naam">
+
+            </p>
+            <p>
+                <label for="wachtwoord">Wachtwoord</label>
+                <input type="password" id="wachtwoord">
+            </p>
+            <input type="submit" value="Aanmaken">
+        </fieldset>
+    </form>
+     <img src="Images/vinkje.svg" alt="">
+    <footer>
+        <img src="Images/wow-logo-foot.min.png" alt="">
+        <p>Neem contact met ons op</p>
+        <ul>
+            <li><a href="https://www.facebook.com/wowiceland"><img id="facebook" src="Images/facebook.svg" alt=""></a></li>
+            <li><a href="https://twitter.com/wow_air"><img id="twetter" src="Images/twitter.svg" alt=""></a></li>
+            <li><a href="https://www.instagram.com/wowair/"><img id="instagram" src="Images/instagram.svg" alt=""></a></li>
+            <li><a href="https://nl.pinterest.com/wowair/"><img id="pinterest" src="Images/pinterest.svg" alt=""></a></li>
+            <li><a href="https://www.youtube.com/user/WOWairTV"><img id="youtube" src="Images/youtube.svg" alt=""></a></li>
+            <li><a href="https://www.tripadvisor.com/Airline_Review-d8728919-Reviews-WOW-Air"><img id="tripadvaisor" src="Images/tripadvisor.svg" alt=""></a></li>
+        </ul>
+    </footer>
+    <script src="Js/Aanmaken.js"></script>
+</body>
+
+</html>
