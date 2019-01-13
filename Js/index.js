@@ -19,7 +19,6 @@ slider.oninput = function () {
     output.innerHTML = this.value;
 }
 
-
 function formSubmit() {
     form.action = "genre.html";
     form.submit();
@@ -148,3 +147,8 @@ downloadArray.forEach((item) => {
         }
     });
 });
+
+
+
+
+
