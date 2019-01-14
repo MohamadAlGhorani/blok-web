@@ -125,13 +125,11 @@ downloadArray.forEach((item) => {
                     item.innerHTML = 'Download';
                 }
 
-
-
-//                if (profileGetal > 0) {
-//                    profileNumber.classList.add('verschijn')
-//                } else if (profileGetal <= 0) {
-//                    profileNumber.classList.remove('verschijn');
-//                }
+                if (profileGetal > 0) {
+                    profileNumber.classList.add('verschijn')
+                } else if (profileGetal <= 0) {
+                    profileNumber.classList.remove('verschijn');
+                }
             }, 2100);
         } else if (item.classList.value == 'ani') {
             item.classList.remove('ani');

@@ -1297,7 +1297,7 @@ body.accountDone > img {
 }
 
 body.accountDone > footer {
-    margin-top: 1.1em;
+    margin-top: 2.6em;
 }
 
 
@@ -1505,6 +1505,11 @@ body.verhaal section article header > a p:first-child {
 }
 
 @media (min-width:36.25em) {
+
+    body.accountDone > footer {
+    margin-top: 15.8em;
+}
+
     header form:nth-of-type(2) {
         position: absolute;
         background-color: white;
@@ -2038,6 +2043,7 @@ body.verhaal section article header > a p:first-child {
 }
 
 @media (min-width:50em) {
+
     body {
         border: 8px solid #982682;
     }
