@@ -60,7 +60,7 @@ verrasMe.addEventListener('click', formSubmitTwee);
 filter.addEventListener('click', filteren);
 search.addEventListener('click', zoeken);
 filter.addEventListener('click', terug);
-//window.addEventListener('load', AanMaken);
+window.addEventListener('load', AanMaken);
 
 
 for (var i = 0; i < like.length; i++) {

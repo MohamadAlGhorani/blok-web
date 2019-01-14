@@ -145,8 +145,3 @@ downloadArray.forEach((item) => {
         }
     });
 });
-
-
-
-
-

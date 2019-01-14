@@ -77,9 +77,9 @@ for (var i = 0; i < favorit.length; i++) {
         console.log(melding);
         console.dir(this);
         melding.classList.add('ani');
-            setTimeout(function () {
-                melding.classList.remove('ani');
-            }, 4500);
+        setTimeout(function () {
+            melding.classList.remove('ani');
+        }, 4500);
     });
 } //end for
 

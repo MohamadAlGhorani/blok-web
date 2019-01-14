@@ -92,7 +92,6 @@ body.instructie section p:first-of-type {
     margin-top: 6em;
     margin-bottom: 6em;
     background-color: #fcdd67
-
 }
 
 body.instructie section p:last-of-type {
@@ -1407,16 +1406,12 @@ body.verhaal section article header > div div p:first-of-type {
     opacity: 1;
 }
 
-body.verhaal section article header > div div p span {
-    animation-name: none;
-}
-
-body.verhaal section article header > div div:last-of-type p:nth-of-type(7) span.ani {
+body.verhaal section article header > div div:last-of-type p:nth-of-type(7) span {
     animation-name: voorbeeldOne;
     animation-duration: 1s;
 }
 
-body.verhaal section article header > div div:last-of-type p:nth-of-type(8) span.ani {
+body.verhaal section article header > div div:last-of-type p:nth-of-type(8) span {
     animation-name: voorbeeldOne;
     animation-duration: 2s;
 }
@@ -1507,8 +1502,8 @@ body.verhaal section article header > a p:first-child {
 @media (min-width:36.25em) {
 
     body.accountDone > footer {
-    margin-top: 15.8em;
-}
+        margin-top: 15.8em;
+    }
 
     header form:nth-of-type(2) {
         position: absolute;
@@ -1671,7 +1666,6 @@ body.verhaal section article header > a p:first-child {
     }
 
     /**shape maken voor de letter k met een tekst**/
-
     body.verhaal section article header > div div:first-of-type p:first-of-type {
         position: static;
         opacity: 1;
@@ -2486,8 +2480,8 @@ body.verhaal section article header > a p:first-child {
 
 }
 
-@media(min-width: 62em ) {
-      body.instructie section {
+@media(min-width: 62em) {
+    body.instructie section {
         background-color: white;
         display: flex;
         justify-content: space-between;
