@@ -47,7 +47,7 @@
 
 @keyframes voorbeeldTwee {
     10% {
-        font-size: 2em;
+        font-size: 1.6em;
     }
     100% {
         color: #982682;
@@ -784,7 +784,7 @@ article > p:last-of-type {
     padding: 1em;
     text-align: center;
     opacity: 0;
-    height: 3.1em;
+    height: 4em;
     transition: opacity 1s;
 }
 
@@ -798,7 +798,7 @@ article > p:last-of-type.ani {
     padding: 1em;
     text-align: center;
     opacity: 1;
-    height: 3.1em;
+    height: 4em;
 }
 
 section article header > p:last-of-type {
@@ -1044,6 +1044,7 @@ article > p > a {
     margin: 0 auto;
     font-weight: 700;
     margin-top: .5em;
+    margin-bottom: .5em;
     display: block;
 }
 
