@@ -11,7 +11,7 @@ var favorit = document.querySelectorAll('section article header button');
 var verrasMe = document.querySelector('header form:last-of-type input:nth-of-type(4)');
 var download = document.querySelectorAll('section article ul li:last-of-type button');
 var downloadArray = Array.from(download);
-
+var status = 1;
 var slider = document.querySelector("header input[type=range]");
 var output = document.querySelector("header form:nth-of-type(2) fieldset:nth-of-type(2) p span");
 output.innerHTML = slider.value;

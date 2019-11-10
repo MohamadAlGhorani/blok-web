@@ -587,7 +587,7 @@ input[type=radio]:hover + label {
 
 }
 
-input[type=radio]:focus + label {
+input[type=radio]:focus + label::before {
     background: rgba(239, 192, 48, 0.4);
     border-radius: 0.625em;
     color: #2b4040;
@@ -595,7 +595,6 @@ input[type=radio]:focus + label {
     padding-top: .3em;
     padding-bottom: .3em;
     height: 1.3em;
-
 }
 
 header form:last-of-type input[type=submit] {
